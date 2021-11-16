@@ -1,0 +1,30 @@
+{
+  "id": "1794850",
+  "name": "阅读助手",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5979574",
+      "name": "copper",
+      "font_class": "copper",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    },
+    {
+      "icon_id": "5979580",
+      "name": "gold",
+      "font_class": "gold",
+      "unicode": "e64c",
+      "unicode_decimal": 58956
+    },
+    {
+      "icon_id": "5979595",
+      "name": "silver",
+      "font_class": "silver",
+      "unicode": "e655",
+      "unicode_decimal": 58965
+    }
+  ]
+}

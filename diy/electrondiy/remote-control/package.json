@@ -1,0 +1,97 @@
+{
+  "name": "mecurius",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/main/index.js",
+  "homepage": "./",
+  "scripts": {
+    "start": "concurrently \"npm run start:render\"  \"wait-on http://localhost:3000 && npm run start:main\"",
+    "start:main": "electron .",
+    "start:render": "cd app/renderer/src/main && npm start",
+    "build": "cd app/renderer/src/main && npm run build",
+    "pack:mac": "electron-builder --mac",
+    "pack:win": "npm run build && electron-builder --win --ia32",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@electron/remote": "^2.0.0",
+    "about-window": "^1.14.0",
+    "applescript": "^1.0.0",
+    "electron-is-dev": "^2.0.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "robotjs": "^0.6.0",
+    "vkey": "^1.0.1",
+    "ws": "^8.2.2"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.1",
+    "cross-env": "^7.0.3",
+    "customize-cra": "^1.0.0",
+    "electron": "^13.1.9",
+    "electron-builder": "^22.11.7",
+    "electron-builder-squirrel-windows": "^22.14.2",
+    "react-app-rewired": "^2.1.8",
+    "wait-on": "^6.0.0"
+  },
+  "build": {
+    "appId": "com.choukin.walle",
+    "productName": "walle",
+    "files": "app",
+    "asar": false,
+    "extraFiles": [
+      "app/renderer/**/src"
+    ],
+    "directories": {
+      "buildResources": "resource",
+      "output": "release"
+    },
+    "copyright": "Copyright @ 2021 choukin",
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "icon": "resources/icon.icns"
+    },
+    "dmg": {
+      "background": "resources/background.png",
+      "window": {
+        "width": 540,
+        "height": 380
+      },
+      "contents": [
+        {
+          "x": 410,
+          "y": 180,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 130,
+          "y": 180,
+          "type": "file"
+        }
+      ],
+      "iconSize": 128
+    },
+    "win": {
+      "icon": "resources/icon.ico",
+      "target": [
+        "squirrel",
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "language": "2052",
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true
+    },
+    "squirrelWindows": {
+      "iconUrl": "https://raw.githubusercontent.com/dengyaolong/geektime-electron/master/img/icon.ico"
+    }
+  }
+}

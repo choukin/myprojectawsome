@@ -1,0 +1,258 @@
+{
+	"frames": {
+		"1.png": {
+			"frame": {
+				"x": 1,
+				"y": 1,
+				"w": 67,
+				"h": 111
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 67,
+				"h": 111
+			},
+			"sourceSize": {
+				"w": 67,
+				"h": 111
+			}
+		},
+		"2.png": {
+			"frame": {
+				"x": 70,
+				"y": 1,
+				"w": 80,
+				"h": 107
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 80,
+				"h": 107
+			},
+			"sourceSize": {
+				"w": 80,
+				"h": 107
+			}
+		},
+		"3.png": {
+			"frame": {
+				"x": 152,
+				"y": 1,
+				"w": 75,
+				"h": 120
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 75,
+				"h": 120
+			},
+			"sourceSize": {
+				"w": 75,
+				"h": 120
+			}
+		},
+		"clock.png": {
+			"frame": {
+				"x": 229,
+				"y": 1,
+				"w": 53,
+				"h": 61
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 53,
+				"h": 61
+			},
+			"sourceSize": {
+				"w": 53,
+				"h": 61
+			}
+		},
+		"go.png": {
+			"frame": {
+				"x": 1,
+				"y": 123,
+				"w": 187,
+				"h": 135
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 187,
+				"h": 135
+			},
+			"sourceSize": {
+				"w": 187,
+				"h": 135
+			}
+		},
+		"leftbox.png": {
+			"frame": {
+				"x": 229,
+				"y": 64,
+				"w": 99,
+				"h": 180
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 99,
+				"h": 180
+			},
+			"sourceSize": {
+				"w": 99,
+				"h": 180
+			}
+		},
+		"plus.png": {
+			"frame": {
+				"x": 284,
+				"y": 1,
+				"w": 66,
+				"h": 42
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 66,
+				"h": 42
+			},
+			"sourceSize": {
+				"w": 66,
+				"h": 42
+			}
+		},
+		"progress.png": {
+			"frame": {
+				"x": 190,
+				"y": 246,
+				"w": 69,
+				"h": 20
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 69,
+				"h": 20
+			},
+			"sourceSize": {
+				"w": 69,
+				"h": 20
+			}
+		},
+		"rightmonkey.png": {
+			"frame": {
+				"x": 352,
+				"y": 1,
+				"w": 164,
+				"h": 266
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 164,
+				"h": 266
+			},
+			"sourceSize": {
+				"w": 164,
+				"h": 266
+			}
+		},
+		"surprisecoupon.png": {
+			"frame": {
+				"x": 1,
+				"y": 269,
+				"w": 103,
+				"h": 115
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 103,
+				"h": 115
+			},
+			"sourceSize": {
+				"w": 103,
+				"h": 115
+			}
+		},
+		"surprisesnow.png": {
+			"frame": {
+				"x": 106,
+				"y": 269,
+				"w": 49,
+				"h": 51
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 49,
+				"h": 51
+			},
+			"sourceSize": {
+				"w": 49,
+				"h": 51
+			}
+		},
+		"surprisepoint.png": {
+			"frame": {
+				"x": 157,
+				"y": 269,
+				"w": 54,
+				"h": 51
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 54,
+				"h": 51
+			},
+			"sourceSize": {
+				"w": 54,
+				"h": 51
+			}
+		}
+  },
+	"animations": {
+		"ready_go":["3.png","2.png","1.png","go.png"]
+	},    
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "playspritesheet.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 517,
+			"h": 385
+		},
+		"scale": "1"
+	}
+}

@@ -1,0 +1,86 @@
+const CryptoJS = require('crypto-js') //引用AES源码js
+
+var key = 'e0140300a7090200' //'e0140300a70902004b2eddf895c1450eab156a82f019eb12' // 'sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssmp' //秘钥
+var iv = '21520baeed8a48eb' // key.substr //'01234567' //向量
+
+/**
+ * 加密
+ */
+function encryptByDES(message) {
+  var keyHex = CryptoJS.enc.Utf8.parse(key)
+  var encrypted = CryptoJS.TripleDES.encrypt(message, keyHex, {
+    iv: CryptoJS.enc.Utf8.parse(iv),
+    mode: CryptoJS.mode.CBC,
+    padding: CryptoJS.pad.Pkcs7
+  })
+  return encrypted.toString()
+}
+
+/**
+ * 解密
+ */
+function decryptByDES(ciphertext) {
+  var keyHex = CryptoJS.enc.Utf8.parse(key)
+
+  var decrypted = CryptoJS.TripleDES.decrypt(
+    {
+      ciphertext: CryptoJS.enc.Base64.parse(ciphertext)
+    },
+    keyHex,
+    {
+      iv: CryptoJS.enc.Utf8.parse(iv),
+      mode: CryptoJS.mode.CBC,
+      padding: CryptoJS.pad.Pkcs7
+    }
+  )
+
+  return decrypted.toString(CryptoJS.enc.Utf8)
+}
+
+/**
+ * 加密
+ */
+function encryptByAES(message) {
+  var keyHex = CryptoJS.enc.Utf8.parse(key)
+  var encrypted = CryptoJS.AES.encrypt(message, keyHex, {
+    iv: CryptoJS.enc.Utf8.parse(iv),
+    mode: CryptoJS.mode.CBC,
+    padding: CryptoJS.pad.Pkcs7
+  })
+  return encrypted.toString()
+}
+
+/**
+ * 解密
+ */
+function decryptByAES(ciphertext) {
+  var keyHex = CryptoJS.enc.Utf8.parse(key)
+
+  var decrypted = CryptoJS.AES.decrypt(
+    {
+      ciphertext: CryptoJS.enc.Base64.parse(ciphertext)
+    },
+    keyHex,
+    {
+      iv: CryptoJS.enc.Utf8.parse(iv),
+      mode: CryptoJS.mode.CBC,
+      padding: CryptoJS.pad.Pkcs7
+    }
+  )
+
+  return decrypted.toString(CryptoJS.enc.Utf8)
+}
+let encryptStr = encryptByAES(
+  '{"activityCode":"qb_gift_rain","playNumKey":"GIFT:RAIN:SCENE:20:20","awardPrizeList":[{"prizeNumber":5,"prizeType":"coupon"},{"prizeNumber":10,"prizeType":"point"}]}'
+)
+console.log('加密：', encryptStr)
+console.log('解密：', decryptByAES(encryptStr))
+console.log(
+  decryptByAES(
+    'b7jEl9y31BwYG/hrAHeqRJ5m0HEqlLrNnPvhanwgSQqoU/K1vaSqFF/K3NauTfExl+M9XpYBDmfmNzPfoQBDyuwnaDNdgIMBH0670SxlpOzhwR1o+LLvGtjsDlVcMvIeXLwOaK/moqd4Q9c5W5KH22G9LbznQz8urxBzsIpSw7dKsIyHjeBcrAhu/u7QMfBKhiC+Oxmfzv1kPWgOrStOkO++KGYTOJ/Ln+tpbHfldz8='
+  )
+)
+module.exports = {
+  encryptByDES: encryptByDES,
+  decryptByDES: decryptByDES
+}

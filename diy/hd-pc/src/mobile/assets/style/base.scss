@@ -1,0 +1,26 @@
+// sass变量
+$primary-color: #F15B5A;  // 主色
+$blue-color: #3A72EF;     // 蓝色
+$yellow-color: #FAC424;   // 黄色
+$title-color: #2D2F46;    // 标题色
+$content-color: #81849F;  // 正文字色
+$remark-color: #B2B4C6;   // 备注色
+$border-color: #EBEBEB;   // 描边色
+$bg-color: #F7F6F8;       // 背景色
+$assist-color: #FCFCFC;   // 模块辅助色
+
+// 解决钱包app iPhone6 高清1px方案问题
+@mixin border($width, $style, $color, $align) {
+  @if $align=='' {
+    border: $width $style $color;
+    @media screen and (width: 375px) {
+      border: $width/2 $style $color;
+    }
+  }
+  @else {
+    border-#{$align}: $width $style $color;
+    @media screen and (width: 375px) {
+      border-#{$align}: $width/2 $style $color;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+const CryptoJS = require('crypto-js') //引用AES源码js
+
+const key = CryptoJS.enc.Utf8.parse('1111wwww2222uuuu') //十六位十六进制数作为密钥
+const iv = CryptoJS.enc.Utf8.parse('') //十六位十六进制数作为密钥偏移量
+
+function AES_ECB_encrypt(message, key) {
+  // utf8字符串—>WordArray对象，WordArray是一个保存32位整数的数组，相当于转成了二进制
+  let keyHex = CryptoJS.enc.Utf8.parse(key) //
+  let messageHex = CryptoJS.enc.Utf8.parse(message)
+  let encrypted = CryptoJS.AES.encrypt(messageHex, keyHex, {
+    mode: CryptoJS.mode.ECB,
+    padding: CryptoJS.pad.Pkcs7
+  })
+  return encrypted.toString() // base64结果
+  //return encrypted.ciphertext.toString();   // 二进制结果
+}
+// AES ECB模式解密
+function AES_ECB_decrypt(messageBase64, key) {
+  // 如果加密后没有转成base64,那么先要转成base64再传入
+  //let encryptedHexStr = CryptoJS.enc.Hex.parse(word);   // 从二进制文本转成二进制
+  //messageBase64 = CryptoJS.enc.Base64.stringify(encryptedHexStr);    // 转成base64
+  let keyHex = CryptoJS.enc.Utf8.parse(key)
+  let decrypt = CryptoJS.AES.decrypt(messageBase64, keyHex, {
+    mode: CryptoJS.mode.ECB,
+    padding: CryptoJS.pad.Pkcs7
+  })
+  let decryptedStr = decrypt.toString(CryptoJS.enc.Utf8)
+  return decryptedStr.toString()
+}
+//解密方法
+function Decrypt(word) {
+  let encryptedHexStr = CryptoJS.enc.Hex.parse(word)
+  let srcs = CryptoJS.enc.Base64.stringify(encryptedHexStr)
+  let decrypt = CryptoJS.AES.decrypt(srcs, key, { iv: iv, mode: CryptoJS.mode.ECB, padding: CryptoJS.pad.pkcs5 })
+  let decryptedStr = decrypt.toString(CryptoJS.enc.Utf8)
+  return decryptedStr.toString()
+}
+
+//加密方法
+function Encrypt(word) {
+  //   let srcs = CryptoJS.enc.Utf8.parse(word)
+  //   let encrypted = CryptoJS.AES.encrypt(srcs, 'password')
+  //   return encrypted.ciphertext.toString().toUpperCase()
+  let srcs = CryptoJS.enc.Utf8.parse(word)
+  //   let encrypted = CryptoJS.AES.encrypt(srcs, key, { iv: iv, mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7 })
+
+  let encrypted = CryptoJS.AES.encrypt(srcs, key, { iv: iv, mode: CryptoJS.mode.CBC, padding: CryptoJS.pad.Pkcs7 })
+
+  return encrypted.ciphertext.toString().toUpperCase()
+}
+
+function getAesString(data, key, iv) {
+  //加密
+  //   key = CryptoJS.enc.Utf8.parse(key)
+  //   iv = CryptoJS.enc.Utf8.parse(iv)
+  var encrypted = CryptoJS.AES.encrypt(data, key, {
+    iv: iv,
+    mode: CryptoJS.mode.CBC,
+    padding: CryptoJS.pad.Pkcs7
+  })
+  return encrypted.toString() //返回的是base64格式的密文
+}
+let keystr = AES_ECB_encrypt('{"name":"test","id":123456,"time":1576658737}', 'password')
+console.log(keystr, 'getAesString')
+console.log(AES_ECB_decrypt(keystr))
+
+// // Encrypt
+// var ciphertext = CryptoJS.AES.encrypt('{"name":"test","id":123456,"time":1576658737}', 'password').toString()
+// console.log(ciphertext, 'ciphertext')
+// console.log(ciphertext, 'encodeURIComponentciphertext')
+
+// // Decrypt
+// var bytes = CryptoJS.AES.decrypt(ciphertext, 'password')
+// var originalText = bytes.toString(CryptoJS.enc.Utf8)
+
+// console.log(originalText) // 'my message'
+// export default {
+//   Decrypt,
+//   Encrypt
+// }

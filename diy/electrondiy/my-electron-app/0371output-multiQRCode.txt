@@ -1,0 +1,8 @@
+[
+	"https://m.qshealth.com/zbb/landpage?mp=health.shop.03710001&bi_cf=health.shop.03710001&healthitem=1",
+	"https://m.qshealth.com/zbb/landpage?mp=health.shop.03710001&bi_cf=health.shop.03710001&healthitem=2",
+	"https://m.qshealth.com/zbb/landpage?mp=health.shop.03710001&bi_cf=health.shop.03710001&healthitem=3",
+	"https://m.qshealth.com/zbb/landpage?mp=health.shop.03710002&bi_cf=health.shop.03710002&healthitem=1",
+	"https://m.qshealth.com/zbb/landpage?mp=health.shop.03710002&bi_cf=health.shop.03710002&healthitem=2",
+	"https://m.qshealth.com/zbb/landpage?mp=health.shop.03710002&bi_cf=health.shop.03710002&healthitem=3"
+]

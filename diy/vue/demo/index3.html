@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{message}}
+        <div :id="message"></div>
+        <todo-list>
+            <todo-item v-for="item in list" :title="item.title" :del="item.del"/>
+        </todo-list>
+    </div> 
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        Vue.component('todo-item',{
+            template:`
+            <li >
+                <span v-if="!del">{{title}}</span>
+                <span v-else style="text-decoration: line-through;">{{title}}</span>
+                <button v-show="!del" @click.stop="handleClick(title)">删除</button>
+            </li>
+            `,
+            props:{
+                title:String,
+                del:{
+                    type:'',
+                    default:false,
+                }
+            },
+            data:function(){
+                return {}
+            },
+            methods:{
+               handleClick(title){
+                   console.log('点击了删除');
+                   this.$emit('delete', title)
+               }
+
+            },
+
+        })
+
+        Vue.component('todo-list',{
+            template:`
+            <ul>
+            <todo-item @delete="handleDelete" v-for="item in list" :title="item.title" :del="item.del"/>
+            </ul>
+            `,
+            data:function(){
+                return {
+                list:[
+                {
+                    title:'课程1',
+                    del:true,
+                },
+                {
+                    title:'课程2',
+                    del:true,
+                },
+                {
+                    title:'课程3',
+                    del:false,
+                }
+                ],
+                item:{
+                    title:'课程4',
+                    del:true,
+                }
+            }
+            },
+            methods:{
+                handleDelete(title){
+                    console.log('delete',title)
+                }
+            }
+        })
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                message:'hello world',
+            }
+            
+        })
+    </script>
+</body>
+</html>

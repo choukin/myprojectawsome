@@ -1,0 +1,7 @@
+build/*.js
+src/assets
+public
+dist
+src/mobile/assets/font/base/iconfont.js
+src/mobile/libs/fastclick.js
+src/mobile/libs/sha1.js
