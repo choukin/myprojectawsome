@@ -1,0 +1,31 @@
+{
+  "name": "myprojectawsome",
+  "version": "1.0.0",
+  "description": "typescript script https://jkchao.github.io/typescript-book-chinese/",
+  "main": "index.js",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "axios": "^0.24.0",
+    "echarts": "^5.2.2",
+    "electron": "^13.1.9",
+    "iconutil": "^1.0.2",
+    "protocol-buffers": "^4.2.0",
+    "resize-detector": "^0.3.0",
+    "vue-router": "^3.5.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/choukin/myprojectawsome.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/choukin/myprojectawsome/issues"
+  },
+  "homepage": "https://github.com/choukin/myprojectawsome#readme"
+}

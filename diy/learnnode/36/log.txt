@@ -1,0 +1,949 @@
+Statistical profiling result from isolate-0x1046a1000-5642-v8.log, (6527 ticks, 17 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+    112    1.7%          /usr/lib/system/libsystem_malloc.dylib
+     32    0.5%          /usr/lib/system/libsystem_platform.dylib
+     30    0.5%          /usr/lib/system/libsystem_kernel.dylib
+     14    0.2%          /usr/lib/system/libsystem_pthread.dylib
+     11    0.2%          /usr/lib/libc++abi.dylib
+      2    0.0%          /usr/lib/system/libsystem_c.dylib
+      1    0.0%          /usr/lib/system/libdyld.dylib
+      1    0.0%          /usr/lib/libc++.1.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+     61    0.9%    1.0%  LazyCompile: *onwrite internal/streams/writable.js:394:17
+     23    0.4%    0.4%  LazyCompile: *end _http_outgoing.js:769:45
+     19    0.3%    0.3%  LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+     19    0.3%    0.3%  LazyCompile: *emit events.js:264:44
+     13    0.2%    0.2%  LazyCompile: *clearBuffer internal/streams/writable.js:493:21
+     11    0.2%    0.2%  LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/context.js:107:10
+     11    0.2%    0.2%  LazyCompile: *Socket net.js:268:16
+      9    0.1%    0.1%  LazyCompile: *afterWriteTick internal/streams/writable.js:451:24
+      8    0.1%    0.1%  LazyCompile: *writeOrBuffer internal/streams/writable.js:334:23
+      8    0.1%    0.1%  LazyCompile: *noop internal/util/debuglog.js:45:14
+      7    0.1%    0.1%  LazyCompile: *parserOnHeadersComplete _http_common.js:75:33
+      7    0.1%    0.1%  LazyCompile: *connectionListenerInternal _http_server.js:418:36
+      6    0.1%    0.1%  LazyCompile: *get headerSent /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/response.js:225:17
+      6    0.1%    0.1%  LazyCompile: *afterShutdown net.js:428:23
+      6    0.1%    0.1%  LazyCompile: *Socket._destroy net.js:653:37
+      6    0.1%    0.1%  LazyCompile: *Readable.on internal/streams/readable.js:857:33
+      5    0.1%    0.1%  RegExp: ^[\^_`a-zA-Z\-0-9!#$%&'*+.|~]+$
+      5    0.1%    0.1%  LazyCompile: *parserOnIncoming _http_server.js:809:26
+      5    0.1%    0.1%  LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:199:10
+      5    0.1%    0.1%  LazyCompile: *onFinish _http_outgoing.js:764:18
+      5    0.1%    0.1%  LazyCompile: *nextTick internal/process/task_queues.js:101:18
+      5    0.1%    0.1%  LazyCompile: *finishMaybe internal/streams/writable.js:635:21
+      5    0.1%    0.1%  LazyCompile: *defaultTriggerAsyncIdScope internal/async_hooks.js:421:36
+      5    0.1%    0.1%  LazyCompile: *data /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/server/get-data.js:5:34
+      5    0.1%    0.1%  LazyCompile: *assignSocket _http_server.js:220:62
+      5    0.1%    0.1%  LazyCompile: *WritableState internal/streams/writable.js:67:23
+      4    0.1%    0.1%  LazyCompile: *socketListenerWrap _http_server.js:923:37
+      4    0.1%    0.1%  LazyCompile: *set length /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/response.js:193:13
+      4    0.1%    0.1%  LazyCompile: *onceWrapper events.js:416:21
+      4    0.1%    0.1%  LazyCompile: *handleRequest /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:162:16
+      4    0.1%    0.1%  LazyCompile: *attachFinishedListener /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/on-finished/index.js:90:32
+      4    0.1%    0.1%  LazyCompile: *Readable.read internal/streams/readable.js:390:35
+      3    0.0%    0.0%  RegExp: ^
+      3    0.0%    0.0%  LazyCompile: *warn internal/console/constructor.js:362:7
+      3    0.0%    0.0%  LazyCompile: *set status /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/response.js:83:13
+      3    0.0%    0.0%  LazyCompile: *resume_ internal/streams/readable.js:965:17
+      3    0.0%    0.0%  LazyCompile: *resOnFinish _http_server.js:756:21
+      3    0.0%    0.0%  LazyCompile: *get writable /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/response.js:525:15
+      3    0.0%    0.0%  LazyCompile: *endReadableNT internal/streams/readable.js:1320:23
+      3    0.0%    0.0%  LazyCompile: *dispatch /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa-compose/index.js:35:23
+      3    0.0%    0.0%  LazyCompile: *_storeHeader _http_outgoing.js:360:22
+      3    0.0%    0.0%  LazyCompile: *_send _http_outgoing.js:305:49
+      3    0.0%    0.0%  LazyCompile: *EventEmitter.init events.js:131:29
+      3    0.0%    0.0%  LazyCompile: *<anonymous> net.js:671:24
+      3    0.0%    0.0%  LazyCompile: *<anonymous> net.js:1007:73
+      2    0.0%    0.0%  RegExp: [^\t\x20-\x7e\x80-\xff]
+      2    0.0%    0.0%  LazyCompile: *writeHead _http_server.js:250:19
+      2    0.0%    0.0%  LazyCompile: *value internal/console/constructor.js:258:20
+      2    0.0%    0.0%  LazyCompile: *set type /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/response.js:310:11
+      2    0.0%    0.0%  LazyCompile: *set path /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/request.js:155:11
+      2    0.0%    0.0%  LazyCompile: *readableAddChunk internal/streams/readable.js:231:26
+      2    0.0%    0.0%  LazyCompile: *processPromiseRejections internal/process/promises.js:190:34
+      2    0.0%    0.0%  LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:165:21
+      2    0.0%    0.0%  LazyCompile: *onSocketResume _http_server.js:887:24
+      2    0.0%    0.0%  LazyCompile: *onFinish /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/on-finished/index.js:95:20
+      2    0.0%    0.0%  LazyCompile: *listenerCount events.js:582:23
+      2    0.0%    0.0%  LazyCompile: *isInsideNodeModules internal/util.js:353:29
+      2    0.0%    0.0%  LazyCompile: *get query /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/request.js:172:12
+      2    0.0%    0.0%  LazyCompile: *get path /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/request.js:144:11
+      2    0.0%    0.0%  LazyCompile: *get internal/streams/duplex.js:92:8
+      2    0.0%    0.0%  LazyCompile: *get internal/console/constructor.js:212:14
+      2    0.0%    0.0%  LazyCompile: *emitReadable_ internal/streams/readable.js:565:23
+      2    0.0%    0.0%  LazyCompile: *addCatch events.js:155:18
+      2    0.0%    0.0%  LazyCompile: *ReadableState internal/streams/readable.js:90:23
+      2    0.0%    0.0%  LazyCompile: *Readable.removeListener internal/streams/readable.js:887:45
+      2    0.0%    0.0%  LazyCompile: *OutgoingMessage _http_outgoing.js:85:25
+      2    0.0%    0.0%  LazyCompile: *<anonymous> internal/console/constructor.js:337:10
+      2    0.0%    0.0%  LazyCompile: *<anonymous> /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/server/index.js:20:24
+      2    0.0%    0.0%  LazyCompile: *<anonymous> /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa-mount/index.js:48:25
+      1    0.0%    0.0%  RegExp: ^(?:is|get)
+      1    0.0%    0.0%  RegExp: ^((?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])[.]){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$
+      1    0.0%    0.0%  RegExp: ^((?:@[^/\\%]+\/)?[^./\\%][^/\\%]*)(\/.*)?$
+      1    0.0%    0.0%  LazyCompile: *socketOnClose _http_server.js:547:23
+      1    0.0%    0.0%  LazyCompile: *setHeader _http_outgoing.js:556:57
+      1    0.0%    0.0%  LazyCompile: *set /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/response.js:461:6
+      1    0.0%    0.0%  LazyCompile: *removeListener events.js:451:28
+      1    0.0%    0.0%  LazyCompile: *remove internal/linkedlist.js:15:16
+      1    0.0%    0.0%  LazyCompile: *realpathSync fs.js:1650:22
+      1    0.0%    0.0%  LazyCompile: *push internal/fixed_queue.js:99:7
+      1    0.0%    0.0%  LazyCompile: *onevent /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/ee-first/index.js:81:26
+      1    0.0%    0.0%  LazyCompile: *once events.js:434:44
+      1    0.0%    0.0%  LazyCompile: *onParserExecuteCommon _http_server.js:658:31
+      1    0.0%    0.0%  LazyCompile: *normalizeString path.js:52:25
+      1    0.0%    0.0%  LazyCompile: *nativeModuleRequire internal/bootstrap/loaders.js:303:29
+      1    0.0%    0.0%  LazyCompile: *module.exports /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/server/get-data.js:3:33
+      1    0.0%    0.0%  LazyCompile: *matchKnownFields _http_incoming.js:157:26
+      1    0.0%    0.0%  LazyCompile: *insert internal/timers.js:345:16
+      1    0.0%    0.0%  LazyCompile: *hidden internal/errors.js:286:25
+      1    0.0%    0.0%  LazyCompile: *handleRequest /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:148:27
+      1    0.0%    0.0%  LazyCompile: *getColorDepth internal/tty.js:102:23
+      1    0.0%    0.0%  LazyCompile: *get net.js:1684:6
+      1    0.0%    0.0%  LazyCompile: *get /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/debug/src/common.js:125:9
+      1    0.0%    0.0%  LazyCompile: *formatWithOptions internal/util/inspect.js:1893:27
+      1    0.0%    0.0%  LazyCompile: *first /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/ee-first/index.js:24:15
+      1    0.0%    0.0%  LazyCompile: *cloneCallSite /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/source-map-support/source-map-support.js:359:23
+      1    0.0%    0.0%  LazyCompile: *_writeRaw _http_outgoing.js:330:19
+      1    0.0%    0.0%  LazyCompile: *Socket.resume net.js:611:35
+      1    0.0%    0.0%  LazyCompile: *Socket.end net.js:590:32
+      1    0.0%    0.0%  LazyCompile: *Socket.connect net.js:927:36
+      1    0.0%    0.0%  LazyCompile: *Readable.resume internal/streams/readable.js:944:37
+      1    0.0%    0.0%  LazyCompile: *Module._nodeModulePaths internal/modules/cjs/loader.js:575:37
+      1    0.0%    0.0%  LazyCompile: *CallSiteToString /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/source-map-support/source-map-support.js:292:26
+      1    0.0%    0.0%  LazyCompile: *<anonymous> internal/streams/writable.js:610:17
+      1    0.0%    0.0%  LazyCompile: *<anonymous> /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/source-map-support/source-map-support.js:361:76
+
+ [C++]:
+   ticks  total  nonlib   name
+   2105   32.3%   33.3%  t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+    972   14.9%   15.4%  T __kernelrpc_mach_port_set_attributes
+    487    7.5%    7.7%  T _vm_copy
+    382    5.9%    6.0%  T __ZN4node7TCPWrap7ConnectERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+    366    5.6%    5.8%  T _host_get_clock_service
+    348    5.3%    5.5%  T __ZN4node10StreamBase8JSMethodIXadL_ZNS0_6WritevERKN2v820FunctionCallbackInfoINS2_5ValueEEEEEEEvS7_
+    134    2.1%    2.1%  t __ZN4node2fsL4ReadERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+     87    1.3%    1.4%  T __ZN4node10HandleWrap5CloseERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+     73    1.1%    1.2%  T __ZN4node10StreamBase8JSMethodIXadL_ZNS0_11WriteStringILNS_8encodingE1EEEiRKN2v820FunctionCallbackInfoINS4_5ValueEEEEEEEvS9_
+     71    1.1%    1.1%  t __ZN4node2fsL22InternalModuleReadJSONERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+     59    0.9%    0.9%  t __ZN4node2fsL18InternalModuleStatERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+     50    0.8%    0.8%  T _posix_spawnattr_destroy
+     46    0.7%    0.7%  T _mach_make_memory_entry_64
+     46    0.7%    0.7%  T __ZN4node13native_module15NativeModuleEnv15CompileFunctionERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     43    0.7%    0.7%  t __ZN4nodeL9EnvGetterEN2v85LocalINS0_4NameEEERKNS0_20PropertyCallbackInfoINS0_5ValueEEE
+     37    0.6%    0.6%  T __kernelrpc_vm_remap
+     37    0.6%    0.6%  T __ZN4node10contextify17ContextifyContext15CompileFunctionERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+     36    0.6%    0.6%  T __ZN4node2fs5CloseERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+     33    0.5%    0.5%  T _semaphore_create
+     31    0.5%    0.5%  T _mig_strncpy_zerofill
+     31    0.5%    0.5%  T _mach_port_allocate
+     13    0.2%    0.2%  T __ZN2v88Function4CallENS_5LocalINS_7ContextEEENS1_INS_5ValueEEEiPS5_
+     12    0.2%    0.2%  T _guarded_open_np
+     12    0.2%    0.2%  T __ZN2v86Object3HasENS_5LocalINS_7ContextEEENS1_INS_5ValueEEE
+     11    0.2%    0.2%  t __ZN2v88internal12StringHasher20HashSequentialStringIhEEjPKT_iy
+     10    0.2%    0.2%  t __ZN4node2fsL4OpenERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+     10    0.2%    0.2%  T __ZN4node10StreamBase8JSMethodIXadL_ZNS0_8ShutdownERKN2v820FunctionCallbackInfoINS2_5ValueEEEEEEEvS7_
+     10    0.2%    0.2%  T __ZN2v88internal9Accessors16ErrorStackGetterENS_5LocalINS_4NameEEERKNS_20PropertyCallbackInfoINS_5ValueEEE
+      9    0.1%    0.1%  T __ZNK2v85Value10IsFunctionEv
+      9    0.1%    0.1%  T __ZN4node9AsyncWrap19EmitTraceEventAfterENS0_12ProviderTypeEd
+      9    0.1%    0.1%  T __ZN4node20InternalMakeCallbackEPNS_11EnvironmentEN2v85LocalINS2_6ObjectEEES5_NS3_INS2_8FunctionEEEiPNS3_INS2_5ValueEEENS_13async_contextE
+      8    0.1%    0.1%  t __ZN2v88internal25FunctionCallbackArguments4CallENS0_15CallHandlerInfoE
+      8    0.1%    0.1%  t __ZN2v88internal12_GLOBAL__N_119HandleApiCallHelperILb0EEENS0_11MaybeHandleINS0_6ObjectEEEPNS0_7IsolateENS0_6HandleINS0_10HeapObjectEEESA_NS8_INS0_20FunctionTemplateInfoEEENS8_IS4_EENS0_16BuiltinArgumentsE
+      7    0.1%    0.1%  t __ZN4node6Buffer12_GLOBAL__N_111StringSliceILNS_8encodingE1EEEvRKN2v820FunctionCallbackInfoINS4_5ValueEEE
+      7    0.1%    0.1%  t __ZN2v88internal14LookupIteratorC2EPNS0_7IsolateENS0_6HandleINS0_6ObjectEEENS4_INS0_4NameEEEmNS4_INS0_10JSReceiverEEENS1_13ConfigurationE
+      7    0.1%    0.1%  T __ZN4node30ReportWritesToJSStreamListener24OnStreamAfterReqFinishedEPNS_9StreamReqEi
+      7    0.1%    0.1%  T __ZN4node12ShutdownWrap6OnDoneEi
+      6    0.1%    0.1%  t __ZN2v88internal17PrototypeIterator7AdvanceEv
+      6    0.1%    0.1%  T __ZN4node7TCPWrap3NewERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      6    0.1%    0.1%  T __ZN4node27DTRACE_HTTP_SERVER_RESPONSEERKN2v820FunctionCallbackInfoINS0_5ValueEEE
+      6    0.1%    0.1%  T __ZN4node10contextify17ContextifyContext22PropertyGetterCallbackEN2v85LocalINS2_4NameEEERKNS2_20PropertyCallbackInfoINS2_5ValueEEE
+      5    0.1%    0.1%  t __ZN4node10StreamBase5WriteEP8uv_buf_tmP11uv_stream_sN2v85LocalINS5_6ObjectEEE
+      5    0.1%    0.1%  T __ZN4node9AsyncWrap12MakeCallbackEN2v85LocalINS1_8FunctionEEEiPNS2_INS1_5ValueEEE
+      5    0.1%    0.1%  T __ZN4node21InternalCallbackScope5CloseEv
+      5    0.1%    0.1%  T __ZN4node10StreamBase9GetObjectEv
+      4    0.1%    0.1%  t __ZZN4node15LibuvStreamWrap9ReadStartEvEN3$_18__invokeEP11uv_handle_smP8uv_buf_t
+      4    0.1%    0.1%  t __ZNSt3__124__put_character_sequenceIcNS_11char_traitsIcEEEERNS_13basic_ostreamIT_T0_EES7_PKS4_m
+      4    0.1%    0.1%  t __ZN4node2fsL5LStatERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      4    0.1%    0.1%  t __ZN2v88internal10JSReceiver11HasPropertyENS0_6HandleIS1_EENS2_INS0_4NameEEE
+      4    0.1%    0.1%  t __ZN2v812_GLOBAL__N_114CallDepthScopeILb1EEC1EPNS_8internal7IsolateENS_5LocalINS_7ContextEEE
+      4    0.1%    0.1%  t __ZN2v812_GLOBAL__N_114CallDepthScopeILb0EEC1EPNS_8internal7IsolateENS_5LocalINS_7ContextEEE
+      4    0.1%    0.1%  T __ZThn88_N4node15LibuvStreamWrap10DoTryWriteEPP8uv_buf_tPm
+      4    0.1%    0.1%  T __ZN4node7binding18GetInternalBindingERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      4    0.1%    0.1%  T __ZN4node10StreamBase6WritevERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      4    0.1%    0.1%  T __ZN2v87Isolate17GetCurrentContextEv
+      4    0.1%    0.1%  T __ZN2v87Context4ExitEv
+      4    0.1%    0.1%  T __ZN2v86Object3GetENS_5LocalINS_7ContextEEEj
+      4    0.1%    0.1%  T __ZN2v811HandleScopeD1Ev
+      3    0.0%    0.0%  t __ZN4nodeL8EnvQueryEN2v85LocalINS0_4NameEEERKNS0_20PropertyCallbackInfoINS0_7IntegerEEE
+      3    0.0%    0.0%  t __ZN4node9inspector12_GLOBAL__N_120InspectorConsoleCallERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      3    0.0%    0.0%  t __ZN4node12_GLOBAL__N_16Parser10InitializeERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      3    0.0%    0.0%  T _mach_port_get_attributes
+      3    0.0%    0.0%  T __ZN4node9AsyncWrap20EmitTraceEventBeforeEv
+      3    0.0%    0.0%  T __ZN4node9AsyncWrap10AsyncResetEN2v85LocalINS1_6ObjectEEEdb
+      3    0.0%    0.0%  T __ZN4node14StreamListener21OnStreamAfterShutdownEPNS_12ShutdownWrapEi
+      3    0.0%    0.0%  T __ZN2v86Object3GetENS_5LocalINS_7ContextEEENS1_INS_5ValueEEE
+      3    0.0%    0.0%  T __ZN2v811HandleScopeC1EPNS_7IsolateE
+      2    0.0%    0.0%  t __pthread_mutex_global_init
+      2    0.0%    0.0%  t __ZNSt3__15dequeIN4node5http218NgHttp2StreamWriteENS_9allocatorIS3_EEE19__add_back_capacityEv
+      2    0.0%    0.0%  t __ZNSt3__112__hash_tableIN4node19CleanupHookCallbackENS2_4HashENS2_5EqualENS_9allocatorIS2_EEE4findIS2_EENS_15__hash_iteratorIPNS_11__hash_nodeIS2_PvEEEERKT_
+      2    0.0%    0.0%  t __ZN4node9StreamReq7DisposeEv
+      2    0.0%    0.0%  t __ZN4node9JSUDPWrap12GetAsyncWrapEv
+      2    0.0%    0.0%  t __ZN4node6Buffer12_GLOBAL__N_114ByteLengthUtf8ERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      2    0.0%    0.0%  t __ZN4node12_GLOBAL__N_16Parser5ProxyIMS1_FivEXadL_ZNS1_16on_message_beginEvEEE3RawEP18llhttp__internal_s
+      2    0.0%    0.0%  t __ZN4node12_GLOBAL__N_16Parser4FreeERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      2    0.0%    0.0%  t __ZN4node12_GLOBAL__N_114ToggleTimerRefERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    0.0%    0.0%  t __ZN4node11Environment14AddCleanupHookEPFvPvES1_
+      2    0.0%    0.0%  t __ZN4node10task_queueL13RunMicrotasksERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    0.0%    0.0%  t __ZN4node10AsyncHooks18push_async_contextEddN2v85LocalINS1_6ObjectEEE
+      2    0.0%    0.0%  t __ZN2v88internalL26Builtin_Impl_HandleApiCallENS0_16BuiltinArgumentsEPNS0_7IsolateE
+      2    0.0%    0.0%  t __ZN2v88internal6Object13GetSimpleHashES1_
+      2    0.0%    0.0%  t __ZN2v88internal12_GLOBAL__N_113GetFrameArrayEPNS0_7IsolateENS0_6HandleINS0_8JSObjectEEE
+      2    0.0%    0.0%  t __ZN2v88internal11StringShape33DispatchToSpecificTypeWithoutCastIZNS1_22DispatchToSpecificTypeIZNS0_6String3GetEiE19StringGetDispatchertJRiEEET0_S4_DpOT1_E17CastingDispatchertJRS4_S6_EEES7_SA_
+      2    0.0%    0.0%  T __ZZN4node10BaseObject31MakeLazilyInitializedJSTemplateEPNS_11EnvironmentEENUlRKN2v820FunctionCallbackInfoINS3_5ValueEEEE_8__invokeES8_
+      2    0.0%    0.0%  T __ZNK2v85Value8ToStringENS_5LocalINS_7ContextEEE
+      2    0.0%    0.0%  T __ZN4node7TTYWrap3NewERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    0.0%    0.0%  T __ZN4node28DTRACE_NET_SERVER_CONNECTIONERKN2v820FunctionCallbackInfoINS0_5ValueEEE
+      2    0.0%    0.0%  T __ZN4node24MakeLibuvRequestCallbackI13uv_shutdown_sPFvPS1_iEE7WrapperES2_i
+      2    0.0%    0.0%  T __ZN4node21InternalCallbackScopeC2EPNS_11EnvironmentEN2v85LocalINS3_6ObjectEEERKNS_13async_contextEi
+      2    0.0%    0.0%  T __ZN4node21InternalCallbackScopeC1EPNS_9AsyncWrapEi
+      2    0.0%    0.0%  T __ZN4node13ParseEncodingEPN2v87IsolateENS0_5LocalINS0_5ValueEEENS_8encodingE
+      2    0.0%    0.0%  T __ZN4node13ParseEncodingEPKcNS_8encodingE
+      2    0.0%    0.0%  T __ZN4node10contextify16ContextifyScript3NewERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      2    0.0%    0.0%  T __ZN4node10BaseObject16InternalFieldSetILi2EXadL_ZNK2v85Value10IsFunctionEvEEEEvNS2_5LocalINS2_6StringEEENS4_IS3_EERKNS2_20PropertyCallbackInfoIvEE
+      2    0.0%    0.0%  T __ZN2v88internal25PropertyCallbackArgumentsC1EPNS0_7IsolateENS0_6ObjectES4_NS0_8JSObjectENS_5MaybeINS0_11ShouldThrowEEE
+      2    0.0%    0.0%  T __ZN2v88internal25FunctionCallbackArgumentsC1EPNS0_7IsolateENS0_6ObjectENS0_10HeapObjectES4_S5_Pmi
+      2    0.0%    0.0%  T __ZN2v87Context5EnterEv
+      2    0.0%    0.0%  T __ZN2v87Context29GetNumberOfEmbedderDataFieldsEv
+      2    0.0%    0.0%  T __ZN2v86String14NewFromOneByteEPNS_7IsolateEPKhNS_13NewStringTypeEi
+      2    0.0%    0.0%  T __ZN2v86Number3NewEPNS_7IsolateEd
+      2    0.0%    0.0%  T __ZN2v82V818GlobalizeReferenceEPNS_8internal7IsolateEPm
+      2    0.0%    0.0%  T __ZN2v820EscapableHandleScopeC2EPNS_7IsolateE
+      1    0.0%    0.0%  t __pthread_tsd_cleanup
+      1    0.0%    0.0%  t __ZZN4node15LibuvStreamWrap10InitializeEN2v85LocalINS1_6ObjectEEENS2_INS1_5ValueEEENS2_INS1_7ContextEEEPvEN3$_08__invokeERKNS1_20FunctionCallbackInfoIS5_EE
+      1    0.0%    0.0%  t __ZThn8_N2v88internal23PointersUpdatingVisitorD1Ev
+      1    0.0%    0.0%  t __ZThn16_N4node18SimpleShutdownWrapINS_7ReqWrapI13uv_shutdown_sEEED0Ev
+      1    0.0%    0.0%  t __ZNSt3__16vectorIN2v86GlobalINS1_6ObjectEEENS_9allocatorIS4_EEE8__appendEm
+      1    0.0%    0.0%  t __ZNSt3__116__pad_and_outputIcNS_11char_traitsIcEEEENS_19ostreambuf_iteratorIT_T0_EES6_PKS4_S8_S8_RNS_8ios_baseES4_
+      1    0.0%    0.0%  t __ZNSt3__113__vector_baseIN2v88internal15TranslatedFrameENS_9allocatorIS3_EEED2Ev
+      1    0.0%    0.0%  t __ZNSt3__112__hash_tableIN4node19CleanupHookCallbackENS2_4HashENS2_5EqualENS_9allocatorIS2_EEE14__erase_uniqueIS2_EEmRKT_
+      1    0.0%    0.0%  t __ZNK2v88internal17PrototypeIterator9HasAccessEv
+      1    0.0%    0.0%  t __ZN4node8PipeWrapD0Ev
+      1    0.0%    0.0%  t __ZN4node3url12_GLOBAL__N_15ParseERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1    0.0%    0.0%  t __ZN4node2fsL5FStatERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.0%    0.0%  t __ZN4node15TraceEventScopeC2EPKcS2_Pv
+      1    0.0%    0.0%  t __ZN4node12_GLOBAL__N_16Parser7ExecuteEPKcm
+      1    0.0%    0.0%  t __ZN4node12_GLOBAL__N_16Parser5ProxyIMS1_FiPKcmEXadL_ZNS1_15on_header_valueES4_mEEE3RawEP18llhttp__internal_sS4_m
+      1    0.0%    0.0%  t __ZN4node12_GLOBAL__N_16Parser3NewERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      1    0.0%    0.0%  t __ZN4node12_GLOBAL__N_16Parser13OnStreamAllocEm
+      1    0.0%    0.0%  t __ZN4node12_GLOBAL__N_16Parser13CreateHeadersEv
+      1    0.0%    0.0%  t __ZN4node12_GLOBAL__N_16Parser12OnStreamReadElRK8uv_buf_t
+      1    0.0%    0.0%  t __ZN4node12_GLOBAL__N_111GetLibuvNowERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.0%    0.0%  t __ZN4node10BaseObjectD2Ev
+      1    0.0%    0.0%  t __ZN2v88internalL43Builtin_Impl_CallSitePrototypeGetMethodNameENS0_16BuiltinArgumentsEPNS0_7IsolateE
+      1    0.0%    0.0%  t __ZN2v88internalL23Builtin_Impl_ArrayShiftENS0_16BuiltinArgumentsEPNS0_7IsolateE
+      1    0.0%    0.0%  t __ZN2v88internal6String7FlattenEPNS0_7IsolateENS0_6HandleIS1_EENS0_14AllocationTypeE
+      1    0.0%    0.0%  t __ZN2v88internal12_GLOBAL__N_124ProbeInstantiationsCacheEPNS0_7IsolateENS0_6HandleINS0_13NativeContextEEEiNS1_11CachingModeE
+      1    0.0%    0.0%  t __ZN2v88internal12_GLOBAL__N_119InstantiateFunctionEPNS0_7IsolateENS0_6HandleINS0_13NativeContextEEENS4_INS0_20FunctionTemplateInfoEEENS0_11MaybeHandleINS0_4NameEEE
+      1    0.0%    0.0%  t __ZN2v88internal12_GLOBAL__N_117InstantiateObjectEPNS0_7IsolateENS0_6HandleINS0_18ObjectTemplateInfoEEENS4_INS0_10JSReceiverEEEb
+      1    0.0%    0.0%  t __ZN2v88internal12_GLOBAL__N_113GetFrameIndexEPNS0_7IsolateENS0_6HandleINS0_8JSObjectEEE
+      1    0.0%    0.0%  T _mach_ports_register
+      1    0.0%    0.0%  T __ZThn88_N4node15LibuvStreamWrap7IsAliveEv
+      1    0.0%    0.0%  T __ZThn88_N4node15LibuvStreamWrap12GetAsyncWrapEv
+      1    0.0%    0.0%  T __ZThn88_N4node15LibuvStreamWrap10DoShutdownEPNS_12ShutdownWrapE
+      1    0.0%    0.0%  T __ZNK4node14StreamResource5ErrorEv
+      1    0.0%    0.0%  T __ZNK2v88Function29NewInstanceWithSideEffectTypeENS_5LocalINS_7ContextEEEiPNS1_INS_5ValueEEENS_14SideEffectTypeE
+      1    0.0%    0.0%  T __ZNK2v86String9WriteUtf8EPNS_7IsolateEPciPii
+      1    0.0%    0.0%  T __ZNK2v86String12WriteOneByteEPNS_7IsolateEPhiii
+      1    0.0%    0.0%  T __ZNK2v86String10Utf8LengthEPNS_7IsolateE
+      1    0.0%    0.0%  T __ZNK2v85Array6LengthEv
+      1    0.0%    0.0%  T __ZN4node9inspector5Agent8IsActiveEv
+      1    0.0%    0.0%  T __ZN4node9Utf8ValueC1EPN2v87IsolateENS1_5LocalINS1_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node9AsyncWrap21EmitTraceEventDestroyEv
+      1    0.0%    0.0%  T __ZN4node9AsyncWrap13EmitAsyncInitEPNS_11EnvironmentEN2v85LocalINS3_6ObjectEEENS4_INS3_6StringEEEdd
+      1    0.0%    0.0%  T __ZN4node7TCPWrap11InstantiateEPNS_11EnvironmentEPNS_9AsyncWrapENS0_10SocketTypeE
+      1    0.0%    0.0%  T __ZN4node2fs6AccessERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node24NodeArrayBufferAllocator8AllocateEm
+      1    0.0%    0.0%  T __ZN4node24NodeArrayBufferAllocator4FreeEPvm
+      1    0.0%    0.0%  T __ZN4node21InternalCallbackScopeC1EPNS_11EnvironmentEN2v85LocalINS3_6ObjectEEERKNS_13async_contextEi
+      1    0.0%    0.0%  T __ZN4node21DTRACE_NET_STREAM_ENDERKN2v820FunctionCallbackInfoINS0_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node14options_parser10GetOptionsERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node14StreamListenerD2Ev
+      1    0.0%    0.0%  T __ZN4node14ConnectionWrapINS_7TCPWrapE8uv_tcp_sEC2EPNS_11EnvironmentEN2v85LocalINS6_6ObjectEEENS_9AsyncWrap12ProviderTypeE
+      1    0.0%    0.0%  T __ZN4node10StreamBase15GetBytesWrittenERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node10StreamBase11WriteStringILNS_8encodingE1EEEiRKN2v820FunctionCallbackInfoINS3_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node10HandleWrap7OnCloseEP11uv_handle_s
+      1    0.0%    0.0%  T __ZN2v88internal8Compiler16CompileOptimizedENS0_6HandleINS0_10JSFunctionEEENS0_15ConcurrencyModeE
+      1    0.0%    0.0%  T __ZN2v88internal8Builtins7builtinEi
+      1    0.0%    0.0%  T __ZN2v88internal8Builtins17InvokeApiFunctionEPNS0_7IsolateEbNS0_6HandleINS0_10HeapObjectEEENS4_INS0_6ObjectEEEiPS8_S6_
+      1    0.0%    0.0%  T __ZN2v88internal8Builtins14builtin_handleEi
+      1    0.0%    0.0%  T __ZN2v88internal5ScopeC2EPNS0_4ZoneEPS1_NS0_9ScopeTypeE
+      1    0.0%    0.0%  T __ZN2v88internal5Scope13AddUnresolvedEPNS0_13VariableProxyE
+      1    0.0%    0.0%  T __ZN2v88internal40Builtin_CallSitePrototypeGetColumnNumberEiPmPNS0_7IsolateE
+      1    0.0%    0.0%  T __ZN2v88internal35Builtin_CallSitePrototypeIsToplevelEiPmPNS0_7IsolateE
+      1    0.0%    0.0%  T __ZN2v88internal32Builtin_DatePrototypeToUTCStringEiPmPNS0_7IsolateE
+      1    0.0%    0.0%  T __ZN2v88internal22HandleScopeImplementer6DetachEPm
+      1    0.0%    0.0%  T __ZN2v88internal18Builtin_ArrayShiftEiPmPNS0_7IsolateE
+      1    0.0%    0.0%  T __ZN2v88TryCatchD2Ev
+      1    0.0%    0.0%  T __ZN2v88TryCatchC2EPNS_7IsolateE
+      1    0.0%    0.0%  T __ZN2v87Isolate31SuppressMicrotaskExecutionScopeC1EPS0_PNS_14MicrotaskQueueE
+      1    0.0%    0.0%  T __ZN2v87Isolate16ClearKeptObjectsEv
+      1    0.0%    0.0%  T __ZN2v87Integer3NewEPNS_7IsolateEi
+      1    0.0%    0.0%  T __ZN2v87Integer15NewFromUnsignedEPNS_7IsolateEj
+      1    0.0%    0.0%  T __ZN2v86Object3SetENS_5LocalINS_7ContextEEENS1_INS_5ValueEEES5_
+      1    0.0%    0.0%  T __ZN2v820EscapableHandleScope6EscapeEPm
+      1    0.0%    0.0%  T __ZN2v816FunctionTemplate11GetFunctionENS_5LocalINS_7ContextEEE
+      1    0.0%    0.0%  T __ZN2v815MicrotasksScope17PerformCheckpointEPNS_7IsolateE
+
+ [Summary]:
+   ticks  total  nonlib   name
+    416    6.4%    6.6%  JavaScript
+   5891   90.3%   93.2%  C++
+    156    2.4%    2.5%  GC
+    203    3.1%          Shared libraries
+     17    0.3%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+   1909   42.1%   29.2%  t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+   1373   30.3%   21.0%  T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+    946   20.9%   14.5%  T __kernelrpc_mach_port_set_attributes
+    110    2.4%    1.7%  T __ZN2v88internal24Builtin_ErrorConstructorEiPmPNS0_7IsolateE
+     37    0.8%    0.6%  T __kernelrpc_vm_remap
+     23    0.5%    0.4%  T __ZN2v88internal30Builtin_ErrorCaptureStackTraceEiPmPNS0_7IsolateE
+     14    0.3%    0.2%  T __ZN2v88internal38Builtin_CallSitePrototypeGetMethodNameEiPmPNS0_7IsolateE
+      8    0.2%    0.1%  T __ZN2v88internal17Builtin_JsonParseEiPmPNS0_7IsolateE
+      6    0.1%    0.1%  T __ZN4node27DTRACE_HTTP_SERVER_RESPONSEERKN2v820FunctionCallbackInfoINS0_5ValueEEE
+      6    0.1%    0.1%  T __ZN2v88internal38Builtin_CallSitePrototypeGetLineNumberEiPmPNS0_7IsolateE
+      6    0.1%    0.1%  T __ZN2v88internal36Builtin_CallSitePrototypeGetFileNameEiPmPNS0_7IsolateE
+      5    0.1%    0.1%  t __ZN4node10StreamBase5WriteEP8uv_buf_tmP11uv_stream_sN2v85LocalINS5_6ObjectEEE
+      5    0.1%    0.1%  T __ZN2v88internal28Builtin_ObjectDefinePropertyEiPmPNS0_7IsolateE
+      4    0.1%    0.1%  T __ZThn88_N4node15LibuvStreamWrap10DoTryWriteEPP8uv_buf_tPm
+      4    0.1%    0.1%  T __ZN4node10StreamBase6WritevERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      3    0.1%    0.0%  T __ZN4node9AsyncWrap10AsyncResetEN2v85LocalINS1_6ObjectEEEdb
+      3    0.1%    0.0%  T __ZN4node10StreamBase8JSMethodIXadL_ZNS0_8ShutdownERKN2v820FunctionCallbackInfoINS2_5ValueEEEEEEEvS7_
+      3    0.1%    0.0%  T __ZN2v88internal40Builtin_CallSitePrototypeGetColumnNumberEiPmPNS0_7IsolateE
+      3    0.1%    0.0%  T __ZN2v88internal33Builtin_CallSitePrototypeIsNativeEiPmPNS0_7IsolateE
+      3    0.1%    0.0%  T __ZN2v88internal18Builtin_ArrayShiftEiPmPNS0_7IsolateE
+      2    0.0%    0.0%  t __ZN4node9inspector12_GLOBAL__N_120InspectorConsoleCallERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      2    0.0%    0.0%  t __ZN4node12_GLOBAL__N_16Parser10InitializeERKN2v820FunctionCallbackInfoINS2_5ValueEEE
+      2    0.0%    0.0%  t __ZN4node10task_queueL13RunMicrotasksERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      2    0.0%    0.0%  T __ZNK2v85Value8ToStringENS_5LocalINS_7ContextEEE
+      2    0.0%    0.0%  T __ZN4node13ParseEncodingEPN2v87IsolateENS0_5LocalINS0_5ValueEEENS_8encodingE
+      2    0.0%    0.0%  T __ZN4node13ParseEncodingEPKcNS_8encodingE
+      2    0.0%    0.0%  T __ZN4node10StreamBase8JSMethodIXadL_ZNS0_6WritevERKN2v820FunctionCallbackInfoINS2_5ValueEEEEEEEvS7_
+      2    0.0%    0.0%  T __ZN2v88internal9Accessors16ErrorStackGetterENS_5LocalINS_4NameEEERKNS_20PropertyCallbackInfoINS_5ValueEEE
+      2    0.0%    0.0%  T __ZN2v88internal40Builtin_CallSitePrototypeGetFunctionNameEiPmPNS0_7IsolateE
+      2    0.0%    0.0%  T __ZN2v88internal36Builtin_CallSitePrototypeGetTypeNameEiPmPNS0_7IsolateE
+      2    0.0%    0.0%  T __ZN2v88internal32Builtin_DatePrototypeToUTCStringEiPmPNS0_7IsolateE
+      2    0.0%    0.0%  T __ZN2v88internal27Builtin_FunctionConstructorEiPmPNS0_7IsolateE
+      2    0.0%    0.0%  T __ZN2v87Isolate17GetCurrentContextEv
+      2    0.0%    0.0%  T __ZN2v86Number3NewEPNS_7IsolateEd
+      2    0.0%    0.0%  T __ZN2v811HandleScopeD1Ev
+      1    0.0%    0.0%  t __ZN2v88internal6String7FlattenEPNS0_7IsolateENS0_6HandleIS1_EENS0_14AllocationTypeE
+      1    0.0%    0.0%  t __ZN2v88internal14LookupIteratorC2EPNS0_7IsolateENS0_6HandleINS0_6ObjectEEENS4_INS0_4NameEEEmNS4_INS0_10JSReceiverEEENS1_13ConfigurationE
+      1    0.0%    0.0%  t __ZN2v88internal11StringShape33DispatchToSpecificTypeWithoutCastIZNS1_22DispatchToSpecificTypeIZNS0_6String3GetEiE19StringGetDispatchertJRiEEET0_S4_DpOT1_E17CastingDispatchertJRS4_S6_EEES7_SA_
+      1    0.0%    0.0%  t __ZN2v812_GLOBAL__N_114CallDepthScopeILb1EEC1EPNS_8internal7IsolateENS_5LocalINS_7ContextEEE
+      1    0.0%    0.0%  t __ZN2v812_GLOBAL__N_114CallDepthScopeILb0EEC1EPNS_8internal7IsolateENS_5LocalINS_7ContextEEE
+      1    0.0%    0.0%  T _mach_ports_register
+      1    0.0%    0.0%  T __ZThn88_N4node15LibuvStreamWrap7IsAliveEv
+      1    0.0%    0.0%  T __ZThn88_N4node15LibuvStreamWrap10DoShutdownEPNS_12ShutdownWrapE
+      1    0.0%    0.0%  T __ZNK2v86String9WriteUtf8EPNS_7IsolateEPciPii
+      1    0.0%    0.0%  T __ZNK2v86String12WriteOneByteEPNS_7IsolateEPhiii
+      1    0.0%    0.0%  T __ZNK2v86String10Utf8LengthEPNS_7IsolateE
+      1    0.0%    0.0%  T __ZN4node9inspector5Agent8IsActiveEv
+      1    0.0%    0.0%  T __ZN4node9Utf8ValueC1EPN2v87IsolateENS1_5LocalINS1_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node9AsyncWrap13EmitAsyncInitEPNS_11EnvironmentEN2v85LocalINS3_6ObjectEEENS4_INS3_6StringEEEdd
+      1    0.0%    0.0%  T __ZN4node28DTRACE_NET_SERVER_CONNECTIONERKN2v820FunctionCallbackInfoINS0_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node24NodeArrayBufferAllocator8AllocateEm
+      1    0.0%    0.0%  T __ZN4node24NodeArrayBufferAllocator4FreeEPvm
+      1    0.0%    0.0%  T __ZN4node10StreamBase8JSMethodIXadL_ZNS0_11WriteStringILNS_8encodingE1EEEiRKN2v820FunctionCallbackInfoINS4_5ValueEEEEEEEvS9_
+      1    0.0%    0.0%  T __ZN4node10StreamBase15GetBytesWrittenERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+      1    0.0%    0.0%  T __ZN4node10StreamBase11WriteStringILNS_8encodingE1EEEiRKN2v820FunctionCallbackInfoINS3_5ValueEEE
+      1    0.0%    0.0%  T __ZN2v88internal38Builtin_CallSitePrototypeIsConstructorEiPmPNS0_7IsolateE
+      1    0.0%    0.0%  T __ZN2v88internal35Builtin_CallSitePrototypeIsToplevelEiPmPNS0_7IsolateE
+      1    0.0%    0.0%  T __ZN2v88internal19Builtin_ArrayConcatEiPmPNS0_7IsolateE
+      1    0.0%    0.0%  T __ZN2v88TryCatchD2Ev
+      1    0.0%    0.0%  T __ZN2v87Isolate31SuppressMicrotaskExecutionScopeC1EPS0_PNS_14MicrotaskQueueE
+      1    0.0%    0.0%  T __ZN2v87Context29GetNumberOfEmbedderDataFieldsEv
+      1    0.0%    0.0%  T __ZN2v86Object3SetENS_5LocalINS_7ContextEEENS1_INS_5ValueEEES5_
+      1    0.0%    0.0%  T __ZN2v86Object3GetENS_5LocalINS_7ContextEEEj
+      1    0.0%    0.0%  T __ZN2v815MicrotasksScope17PerformCheckpointEPNS_7IsolateE
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   2105   32.3%  t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+    573   27.2%    t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+     89   15.5%      LazyCompile: *Socket net.js:268:16
+     54   60.7%        LazyCompile: *onconnection net.js:1531:22
+     20   22.5%        LazyCompile: *data /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/server/get-data.js:5:34
+     19   95.0%          LazyCompile: *<anonymous> /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/server/index.js:20:24
+     19  100.0%            LazyCompile: *dispatch /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa-compose/index.js:35:23
+      1    5.0%          t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1  100.0%            LazyCompile: ~module.exports /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/server/get-data.js:3:33
+     14   15.7%        LazyCompile: ~onconnection net.js:1531:22
+      1    1.1%        LazyCompile: ~initSocket /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/easy_sock/lib/easy_sock.js:174:20
+      1  100.0%          LazyCompile: *module.exports /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/server/get-data.js:3:33
+      1  100.0%            LazyCompile: ~<anonymous> /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/server/index.js:20:24
+     57    9.9%      t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+     10   17.5%        LazyCompile: *dispatch /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa-compose/index.js:35:23
+     10  100.0%          LazyCompile: *handleRequest /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:162:16
+     10  100.0%            LazyCompile: *handleRequest /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:148:27
+      7   12.3%        LazyCompile: ~structuredStack structured-stack:3:38
+      5   71.4%          LazyCompile: *isInsideNodeModules internal/util.js:353:29
+      5  100.0%            LazyCompile: ~showFlaggedDeprecation buffer.js:180:32
+      2   28.6%          LazyCompile: ~isInsideNodeModules internal/util.js:353:29
+      2  100.0%            LazyCompile: ~showFlaggedDeprecation buffer.js:180:32
+      5    8.8%        LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:199:10
+      5  100.0%          LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/context.js:107:10
+      4   80.0%            LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:165:21
+      1   20.0%            LazyCompile: ~onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:165:21
+      3    5.3%        t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      3  100.0%          LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+      2    3.5%        LazyCompile: ~onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:199:10
+      1   50.0%          LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/context.js:107:10
+      1  100.0%            LazyCompile: ~onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:165:21
+      1   50.0%          LazyCompile: *emit events.js:264:44
+      1  100.0%            LazyCompile: ~onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/context.js:107:10
+      2    3.5%        LazyCompile: ~cloneCallSite /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/source-map-support/source-map-support.js:359:23
+      2  100.0%          LazyCompile: ~wrapCallSite /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/source-map-support/source-map-support.js:368:22
+      2  100.0%            LazyCompile: ~prepareStackTrace /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/source-map-support/source-map-support.js:433:27
+      2    3.5%        LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:444:28
+      2  100.0%          LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:796:35
+      2  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:704:24
+      2    3.5%        LazyCompile: *prepareStackTrace /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/source-map-support/source-map-support.js:433:27
+      2  100.0%          LazyCompile: ~maybeOverridePrepareStackTrace internal/errors.js:84:40
+      2  100.0%            LazyCompile: ~prepareStackTrace internal/errors.js:59:27
+      2    3.5%        LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/context.js:107:10
+      2  100.0%          LazyCompile: ~onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:165:21
+      2  100.0%            t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      2    3.5%        LazyCompile: *cloneCallSite /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/source-map-support/source-map-support.js:359:23
+      2  100.0%          LazyCompile: ~wrapCallSite /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/source-map-support/source-map-support.js:368:22
+      2  100.0%            LazyCompile: ~prepareStackTrace /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/source-map-support/source-map-support.js:433:27
+      2    3.5%        Eval: ~<anonymous> /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/@babel/generator/lib/printer.js:1:1
+      2  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1017:37
+      2  100.0%            LazyCompile: ~_compile /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/pirates/lib/index.js:123:43
+      1    1.8%        LazyCompile: ~toIdentifier /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/resolve-path/node_modules/http-errors/index.js:256:23
+      1  100.0%          LazyCompile: ~forEachCode /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/resolve-path/node_modules/http-errors/index.js:226:38
+      1  100.0%            t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1    1.8%        LazyCompile: ~replaceCarets /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/@babel/core/node_modules/semver/semver.js:1097:24
+      1  100.0%          LazyCompile: ~parseComparator /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/@babel/core/node_modules/semver/semver.js:1034:26
+      1  100.0%            LazyCompile: ~<anonymous> /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/@babel/core/node_modules/semver/semver.js:965:43
+      1    1.8%        LazyCompile: ~readPackage internal/modules/cjs/loader.js:240:21
+      1  100.0%          LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:271:26
+      1  100.0%            LazyCompile: ~trySelf internal/modules/cjs/loader.js:391:17
+      1    1.8%        LazyCompile: ~read internal/modules/package_json_reader.js:16:14
+      1  100.0%          LazyCompile: ~readPackage internal/modules/cjs/loader.js:240:21
+      1  100.0%            LazyCompile: ~resolveExports internal/modules/cjs/loader.js:422:24
+      1    1.8%        LazyCompile: ~onParserExecuteCommon _http_server.js:658:31
+      1  100.0%          LazyCompile: ~onParserExecute _http_server.js:601:25
+      1    1.8%        LazyCompile: ~newGenerator /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/gensync/index.js:144:22
+      1  100.0%          LazyCompile: ~gensync /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/gensync/index.js:15:19
+      1  100.0%            Eval: ~<anonymous> /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/@babel/core/lib/gensync-utils/fs.js:1:1
+      1    1.8%        LazyCompile: ~matchPattern /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/@babel/core/lib/config/config-chain.js:546:22
+      1  100.0%          LazyCompile: ~<anonymous> /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/@babel/core/lib/config/config-chain.js:543:24
+      1  100.0%            t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1    1.8%        LazyCompile: ~SafeMap internal/per_context/primordials.js:94:3
+      1  100.0%          LazyCompile: ~ModuleMap internal/modules/esm/module_map.js:14:1
+      1  100.0%            LazyCompile: ~Loader internal/modules/esm/loader.js:42:14
+      1    1.8%        LazyCompile: ~Range.parseRange /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/semver/semver.js:891:39
+      1  100.0%          LazyCompile: ~<anonymous> /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/semver/semver.js:866:53
+      1  100.0%            t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1    1.8%        LazyCompile: ~<anonymous> internal/per_context/primordials.js:23:10
+      1  100.0%          LazyCompile: ~resolveExports internal/modules/cjs/loader.js:422:24
+      1  100.0%            LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:444:28
+      1    1.8%        LazyCompile: *wrapCallSite /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/source-map-support/source-map-support.js:368:22
+      1  100.0%          LazyCompile: ~prepareStackTrace /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/source-map-support/source-map-support.js:433:27
+      1  100.0%            LazyCompile: ~maybeOverridePrepareStackTrace internal/errors.js:84:40
+      1    1.8%        LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+      1    1.8%        LazyCompile: *format url.js:576:39
+      1  100.0%          LazyCompile: *set path /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/request.js:155:11
+      1  100.0%            t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1    1.8%        LazyCompile: *<anonymous> internal/per_context/primordials.js:23:10
+      1  100.0%          LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:271:26
+      1  100.0%            LazyCompile: ~trySelf internal/modules/cjs/loader.js:391:17
+      1    1.8%        Eval: ~<anonymous> _tls_wrap.js:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:270:27
+      1  100.0%            LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:303:29
+      1    1.8%        Eval: ~<anonymous> /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/@babel/types/lib/index.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1017:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+      1    1.8%        Eval: ~<anonymous> /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/@babel/traverse/lib/path/index.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1017:37
+      1  100.0%            LazyCompile: ~_compile /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/pirates/lib/index.js:123:43
+      1    1.8%        Eval: ~<anonymous> /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/@babel/generator/lib/generators/index.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1017:37
+      1  100.0%            LazyCompile: ~_compile /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/pirates/lib/index.js:123:43
+     42    7.3%      LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+     30    5.2%      LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/context.js:107:10
+     21   70.0%        LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:165:21
+     21  100.0%          t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+     21  100.0%            LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+      9   30.0%        LazyCompile: ~onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:165:21
+      9  100.0%          t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      9  100.0%            LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+     27    4.7%      LazyCompile: *ReadableState internal/streams/readable.js:90:23
+     24   88.9%        LazyCompile: *Socket net.js:268:16
+     17   70.8%          LazyCompile: *onconnection net.js:1531:22
+      5   20.8%          LazyCompile: ~onconnection net.js:1531:22
+      2    8.3%          LazyCompile: *data /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/server/get-data.js:5:34
+      2  100.0%            LazyCompile: *<anonymous> /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/server/index.js:20:24
+      2    7.4%        LazyCompile: *parserOnHeadersComplete _http_common.js:75:33
+      1    3.7%        LazyCompile: ~Readable internal/streams/readable.js:187:18
+      1  100.0%          LazyCompile: ~Duplex internal/streams/duplex.js:52:16
+      1  100.0%            LazyCompile: ~Socket net.js:268:16
+     26    4.5%      LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:199:10
+     26  100.0%        LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/context.js:107:10
+     21   80.8%          LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:165:21
+     21  100.0%            t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      5   19.2%          LazyCompile: ~onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:165:21
+      5  100.0%            t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+     16    2.8%      LazyCompile: *_storeHeader _http_outgoing.js:360:22
+     13   81.3%        LazyCompile: *writeHead _http_server.js:250:19
+     13  100.0%          LazyCompile: *end _http_outgoing.js:769:45
+     13  100.0%            LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/context.js:107:10
+      3   18.8%        LazyCompile: ~writeHead _http_server.js:250:19
+      3  100.0%          LazyCompile: *end _http_outgoing.js:769:45
+      3  100.0%            LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/context.js:107:10
+     12    2.1%      LazyCompile: *Readable.on internal/streams/readable.js:857:33
+      4   33.3%        LazyCompile: *connectionListenerInternal _http_server.js:418:36
+      3   75.0%          LazyCompile: *connectionListener _http_server.js:412:28
+      3  100.0%            LazyCompile: *onconnection net.js:1531:22
+      1   25.0%          LazyCompile: ~defaultTriggerAsyncIdScope internal/async_hooks.js:421:36
+      1  100.0%            LazyCompile: ~connectionListener _http_server.js:412:28
+      2   16.7%        LazyCompile: ~initSocket /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/easy_sock/lib/easy_sock.js:174:20
+      2  100.0%          LazyCompile: ~Easysock.write /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/easy_sock/lib/easy_sock.js:76:36
+      2  100.0%            LazyCompile: ~data /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/server/get-data.js:5:34
+      2   16.7%        LazyCompile: *value internal/console/constructor.js:258:20
+      2  100.0%          LazyCompile: *warn internal/console/constructor.js:362:7
+      2  100.0%            t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1    8.3%        LazyCompile: ~connectionListenerInternal _http_server.js:418:36
+      1  100.0%          LazyCompile: ~defaultTriggerAsyncIdScope internal/async_hooks.js:421:36
+      1  100.0%            LazyCompile: ~connectionListener _http_server.js:412:28
+      1    8.3%        LazyCompile: *resOnFinish _http_server.js:756:21
+      1  100.0%          LazyCompile: *onFinish _http_outgoing.js:764:18
+      1  100.0%            LazyCompile: *callback internal/streams/writable.js:511:44
+      1    8.3%        LazyCompile: *once events.js:434:44
+      1  100.0%          LazyCompile: ~value internal/console/constructor.js:258:20
+      1  100.0%            LazyCompile: ~warn internal/console/constructor.js:362:7
+      1    8.3%        LazyCompile: *data /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/server/get-data.js:5:34
+      1  100.0%          LazyCompile: *<anonymous> /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/server/index.js:20:24
+      1  100.0%            LazyCompile: *dispatch /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa-compose/index.js:35:23
+     10    1.7%      LazyCompile: *getColorDepth internal/tty.js:102:23
+     10  100.0%        LazyCompile: *warn internal/console/constructor.js:362:7
+     10  100.0%          t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+     10  100.0%            LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:199:10
+      9    1.6%      LazyCompile: ~Socket net.js:268:16
+      9  100.0%        LazyCompile: ~onconnection net.js:1531:22
+      7    1.2%      LazyCompile: ~structuredStack structured-stack:3:38
+      6   85.7%        LazyCompile: *isInsideNodeModules internal/util.js:353:29
+      6  100.0%          LazyCompile: ~showFlaggedDeprecation buffer.js:180:32
+      6  100.0%            LazyCompile: *data /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/server/get-data.js:5:34
+      1   14.3%        LazyCompile: ~isInsideNodeModules internal/util.js:353:29
+      1  100.0%          LazyCompile: ~showFlaggedDeprecation buffer.js:180:32
+      1  100.0%            LazyCompile: ~Buffer buffer.js:280:16
+      7    1.2%      LazyCompile: *dispatch /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa-compose/index.js:35:23
+      7  100.0%        LazyCompile: *handleRequest /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:162:16
+      7  100.0%          LazyCompile: *handleRequest /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:148:27
+      7  100.0%            LazyCompile: *parserOnIncoming _http_server.js:809:26
+      7    1.2%      LazyCompile: *WritableState internal/streams/writable.js:67:23
+      7  100.0%        LazyCompile: *Socket net.js:268:16
+      6   85.7%          LazyCompile: *onconnection net.js:1531:22
+      1   14.3%          LazyCompile: ~onconnection net.js:1531:22
+      6    1.0%      LazyCompile: ~resume_ internal/streams/readable.js:965:17
+      6  100.0%        LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+      6    1.0%      LazyCompile: ~insert internal/timers.js:345:16
+      6  100.0%        LazyCompile: ~setTimeout timers.js:133:20
+      5   83.3%          LazyCompile: *data /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/server/get-data.js:5:34
+      5  100.0%            LazyCompile: *<anonymous> /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/server/index.js:20:24
+      1   16.7%          LazyCompile: ~initSocket /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/easy_sock/lib/easy_sock.js:174:20
+      1  100.0%            LazyCompile: ~Easysock.write /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/easy_sock/lib/easy_sock.js:76:36
+      6    1.0%      Eval: ~<anonymous> /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/@babel/traverse/lib/path/index.js:1:1
+      6  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1017:37
+      6  100.0%          LazyCompile: ~_compile /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/pirates/lib/index.js:123:43
+      6  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+     82    3.9%    T __ZN2v88internal24Builtin_ErrorConstructorEiPmPNS0_7IsolateE
+     76   92.7%      LazyCompile: ~structuredStack structured-stack:3:38
+     55   72.4%        LazyCompile: *isInsideNodeModules internal/util.js:353:29
+     55  100.0%          LazyCompile: ~showFlaggedDeprecation buffer.js:180:32
+     55  100.0%            LazyCompile: *data /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/server/get-data.js:5:34
+     21   27.6%        LazyCompile: ~isInsideNodeModules internal/util.js:353:29
+     21  100.0%          LazyCompile: ~showFlaggedDeprecation buffer.js:180:32
+     12   57.1%            LazyCompile: ~Buffer buffer.js:280:16
+      9   42.9%            LazyCompile: *data /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/server/get-data.js:5:34
+      5    6.1%      LazyCompile: *exceptionWithHostPort internal/errors.js:525:31
+      5  100.0%        LazyCompile: ~afterConnect net.js:1108:22
+      1    1.2%      LazyCompile: ~exceptionWithHostPort internal/errors.js:525:31
+      1  100.0%        LazyCompile: ~afterConnect net.js:1108:22
+     68    3.2%    LazyCompile: *clearBuffer internal/streams/writable.js:493:21
+     68  100.0%      LazyCompile: *end _http_outgoing.js:769:45
+     68  100.0%        LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/context.js:107:10
+     40   58.8%          LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:165:21
+     40  100.0%            t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+     28   41.2%          LazyCompile: ~onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:165:21
+     28  100.0%            t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+     50    2.4%    LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/context.js:107:10
+     30   60.0%      LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:165:21
+     30  100.0%        t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+     30  100.0%          LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+     20   40.0%      LazyCompile: ~onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:165:21
+     20  100.0%        t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+     20  100.0%          LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+     27    1.3%    LazyCompile: ~structuredStack structured-stack:3:38
+     16   59.3%      LazyCompile: *isInsideNodeModules internal/util.js:353:29
+     16  100.0%        LazyCompile: ~showFlaggedDeprecation buffer.js:180:32
+     16  100.0%          LazyCompile: *data /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/server/get-data.js:5:34
+     16  100.0%            LazyCompile: *<anonymous> /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/server/index.js:20:24
+     11   40.7%      LazyCompile: ~isInsideNodeModules internal/util.js:353:29
+     11  100.0%        LazyCompile: ~showFlaggedDeprecation buffer.js:180:32
+      7   63.6%          LazyCompile: *data /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/server/get-data.js:5:34
+      5   71.4%            LazyCompile: *<anonymous> /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/server/index.js:20:24
+      2   28.6%            t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      4   36.4%          LazyCompile: ~Buffer buffer.js:280:16
+      4  100.0%            LazyCompile: ~initSocket /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/easy_sock/lib/easy_sock.js:174:20
+     26    1.2%    LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+     23    1.1%    T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+      6   26.1%      LazyCompile: *Socket._destroy net.js:653:37
+      6  100.0%        LazyCompile: *destroy internal/streams/destroy.js:5:17
+      5   83.3%          LazyCompile: *onceWrapper events.js:416:21
+      5  100.0%            LazyCompile: *emit events.js:264:44
+      1   16.7%          LazyCompile: ~afterConnect net.js:1108:22
+      3   13.0%      LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:199:10
+      3  100.0%        LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/context.js:107:10
+      2   66.7%          LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:165:21
+      2  100.0%            t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1   33.3%          LazyCompile: ~onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:165:21
+      1  100.0%            t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      3   13.0%      LazyCompile: *clearBuffer internal/streams/writable.js:493:21
+      3  100.0%        LazyCompile: *end _http_outgoing.js:769:45
+      3  100.0%          LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/context.js:107:10
+      2   66.7%            LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:165:21
+      1   33.3%            LazyCompile: ~onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:165:21
+      2    8.7%      LazyCompile: ~internalConnect net.js:865:25
+      1   50.0%        LazyCompile: ~defaultTriggerAsyncIdScope internal/async_hooks.js:421:36
+      1  100.0%          LazyCompile: ~<anonymous> net.js:1007:73
+      1  100.0%            LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+      1   50.0%        LazyCompile: *<anonymous> net.js:1007:73
+      1  100.0%          LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+      2    8.7%      LazyCompile: ~Socket._final net.js:403:35
+      2  100.0%        LazyCompile: ~callFinal internal/streams/writable.js:609:19
+      2  100.0%          LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+      2    8.7%      LazyCompile: *writeOrBuffer internal/streams/writable.js:334:23
+      2  100.0%        LazyCompile: *value internal/console/constructor.js:258:20
+      2  100.0%          LazyCompile: *warn internal/console/constructor.js:362:7
+      2  100.0%            t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1    4.3%      LazyCompile: ~writevGeneric internal/stream_base_commons.js:118:23
+      1  100.0%        LazyCompile: ~Socket._writeGeneric net.js:759:42
+      1  100.0%          LazyCompile: ~Socket._writev net.js:791:36
+      1  100.0%            LazyCompile: ~doWrite internal/streams/writable.js:367:17
+      1    4.3%      LazyCompile: ~openSync fs.js:467:18
+      1  100.0%        LazyCompile: ~readFileSync fs.js:374:22
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:916:33
+      1    4.3%      LazyCompile: ~getNewAsyncId net.js:151:23
+      1  100.0%        LazyCompile: ~initSocketHandle net.js:239:26
+      1  100.0%          LazyCompile: ~Socket.connect net.js:927:36
+      1  100.0%            LazyCompile: *data /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/server/get-data.js:5:34
+      1    4.3%      LazyCompile: ~getColorDepth internal/tty.js:102:23
+      1  100.0%        LazyCompile: ~value internal/console/constructor.js:300:20
+      1  100.0%          LazyCompile: ~value internal/console/constructor.js:328:20
+      1  100.0%            LazyCompile: ~warn internal/console/constructor.js:362:7
+      1    4.3%      LazyCompile: ~Socket._destroy net.js:653:37
+      1  100.0%        LazyCompile: ~destroy internal/streams/destroy.js:5:17
+      1  100.0%          LazyCompile: ~onceWrapper events.js:416:21
+      1  100.0%            LazyCompile: ~emit events.js:264:44
+     22    1.0%    T __ZN2v88internal30Builtin_ErrorCaptureStackTraceEiPmPNS0_7IsolateE
+     13   59.1%      LazyCompile: ~exceptionWithHostPort internal/errors.js:525:31
+     13  100.0%        LazyCompile: ~afterConnect net.js:1108:22
+      9   40.9%      LazyCompile: *exceptionWithHostPort internal/errors.js:525:31
+      9  100.0%        LazyCompile: ~afterConnect net.js:1108:22
+     22    1.0%    LazyCompile: *Readable.on internal/streams/readable.js:857:33
+     12   54.5%      LazyCompile: *connectionListenerInternal _http_server.js:418:36
+      9   75.0%        LazyCompile: *connectionListener _http_server.js:412:28
+      9  100.0%          LazyCompile: *onconnection net.js:1531:22
+      2   16.7%        LazyCompile: *defaultTriggerAsyncIdScope internal/async_hooks.js:421:36
+      2  100.0%          LazyCompile: ~connectionListener _http_server.js:412:28
+      1   50.0%            LazyCompile: *onconnection net.js:1531:22
+      1   50.0%            LazyCompile: *emit events.js:264:44
+      1    8.3%        LazyCompile: ~defaultTriggerAsyncIdScope internal/async_hooks.js:421:36
+      1  100.0%          LazyCompile: ~connectionListener _http_server.js:412:28
+      1  100.0%            LazyCompile: *emit events.js:264:44
+      5   22.7%      LazyCompile: *Socket net.js:268:16
+      3   60.0%        LazyCompile: *onconnection net.js:1531:22
+      1   20.0%        LazyCompile: ~onconnection net.js:1531:22
+      1   20.0%        LazyCompile: ~initSocket /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/easy_sock/lib/easy_sock.js:174:20
+      1  100.0%          LazyCompile: ~Easysock.write /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/easy_sock/lib/easy_sock.js:76:36
+      1  100.0%            LazyCompile: ~data /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/server/get-data.js:5:34
+      1    4.5%      LazyCompile: ~once events.js:434:44
+      1  100.0%        LazyCompile: ~<anonymous> internal/console/constructor.js:337:10
+      1  100.0%          LazyCompile: ~afterWrite internal/streams/writable.js:456:20
+      1  100.0%            LazyCompile: ~afterWriteTick internal/streams/writable.js:451:24
+      1    4.5%      LazyCompile: ~clearIncoming _http_server.js:714:23
+      1  100.0%        LazyCompile: ~resOnFinish _http_server.js:756:21
+      1  100.0%          LazyCompile: *emit events.js:264:44
+      1  100.0%            LazyCompile: ~onFinish _http_outgoing.js:764:18
+      1    4.5%      LazyCompile: *value internal/console/constructor.js:258:20
+      1  100.0%        LazyCompile: *warn internal/console/constructor.js:362:7
+      1  100.0%          t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1  100.0%            LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:199:10
+      1    4.5%      LazyCompile: *once events.js:434:44
+      1  100.0%        LazyCompile: *Readable.read internal/streams/readable.js:390:35
+      1  100.0%          LazyCompile: *resume_ internal/streams/readable.js:965:17
+      1  100.0%            LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+      1    4.5%      LazyCompile: *assignSocket _http_server.js:220:62
+      1  100.0%        LazyCompile: *parserOnIncoming _http_server.js:809:26
+      1  100.0%          LazyCompile: *parserOnHeadersComplete _http_common.js:75:33
+
+    972   14.9%  T __kernelrpc_mach_port_set_attributes
+    936   96.3%    LazyCompile: *clearBuffer internal/streams/writable.js:493:21
+    936  100.0%      LazyCompile: *end _http_outgoing.js:769:45
+    936  100.0%        LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/context.js:107:10
+    576   61.5%          LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:165:21
+    576  100.0%            t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+    360   38.5%          LazyCompile: ~onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:165:21
+    360  100.0%            t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+     17    1.7%    t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      3   17.6%      t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1   33.3%        LazyCompile: ~structuredStack structured-stack:3:38
+      1  100.0%          LazyCompile: ~isInsideNodeModules internal/util.js:353:29
+      1  100.0%            LazyCompile: ~showFlaggedDeprecation buffer.js:180:32
+      1   33.3%        LazyCompile: ~checkIsHttpToken _http_common.js:219:26
+      1  100.0%          LazyCompile: ~<anonymous> _http_outgoing.js:540:44
+      1  100.0%            LazyCompile: ~hidden internal/errors.js:286:25
+      1   33.3%        Eval: ~<anonymous> /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/debug/src/node.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1017:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+      1    5.9%      LazyCompile: ~resolvePackageTarget internal/modules/esm/resolve.js:371:30
+      1  100.0%        LazyCompile: ~packageExportsResolve internal/modules/esm/resolve.js:467:31
+      1  100.0%          LazyCompile: ~resolveExports internal/modules/cjs/loader.js:422:24
+      1  100.0%            LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:444:28
+      1    5.9%      LazyCompile: ~resolveExports internal/modules/cjs/loader.js:422:24
+      1  100.0%        LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:444:28
+      1  100.0%          LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:796:35
+      1  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:704:24
+      1    5.9%      LazyCompile: ~readSync fs.js:555:18
+      1  100.0%        LazyCompile: ~tryReadSync fs.js:362:21
+      1  100.0%          LazyCompile: ~readFileSync fs.js:374:22
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+      1    5.9%      LazyCompile: ~r /Users/qscbfe/Library/Application Support/Code/User/workspaceStorage/fdd202748a5fdca895b2b042014bcb9e/ms-vscode.js-debug/bootloader.js:1:33
+      1  100.0%        LazyCompile: ~<anonymous> /Users/qscbfe/Library/Application Support/Code/User/workspaceStorage/fdd202748a5fdca895b2b042014bcb9e/ms-vscode.js-debug/bootloader.js:7:29738
+      1  100.0%          LazyCompile: ~r /Users/qscbfe/Library/Application Support/Code/User/workspaceStorage/fdd202748a5fdca895b2b042014bcb9e/ms-vscode.js-debug/bootloader.js:1:33
+      1  100.0%            LazyCompile: ~<anonymous> /Users/qscbfe/Library/Application Support/Code/User/workspaceStorage/fdd202748a5fdca895b2b042014bcb9e/ms-vscode.js-debug/bootloader.js:7:27277
+      1    5.9%      LazyCompile: ~push internal/fixed_queue.js:99:7
+      1  100.0%        LazyCompile: ~nextTick internal/process/task_queues.js:101:18
+      1  100.0%          LazyCompile: ~load /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/@babel/register/lib/cache.js:83:14
+      1  100.0%            LazyCompile: ~register /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/@babel/register/lib/node.js:130:18
+      1    5.9%      LazyCompile: ~getStat /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/browserslist/node.js:199:28
+      1  100.0%        LazyCompile: ~browserslist /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/browserslist/index.js:409:22
+      1  100.0%          LazyCompile: ~resolveTargets /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/@babel/helper-compilation-targets/lib/index.js:167:24
+      1  100.0%            LazyCompile: ~getTargets /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/@babel/helper-compilation-targets/lib/index.js:176:20
+      1    5.9%      LazyCompile: ~get /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/@babel/core/lib/index.js:113:17
+      1  100.0%        t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1  100.0%          t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1  100.0%            LazyCompile: ~<anonymous> /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/@babel/core/lib/config/full.js:202:82
+      1    5.9%      LazyCompile: ~cloneDeep /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/clone-deep/index.js:11:19
+      1  100.0%        LazyCompile: ~compile /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/@babel/register/lib/node.js:56:17
+      1  100.0%          LazyCompile: ~compileHook /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/@babel/register/lib/node.js:100:21
+      1  100.0%            LazyCompile: ~_compile /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/pirates/lib/index.js:123:43
+      1    5.9%      LazyCompile: ~Buffer buffer.js:280:16
+      1  100.0%        LazyCompile: ~initSocket /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/easy_sock/lib/easy_sock.js:174:20
+      1  100.0%          LazyCompile: ~Easysock.write /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/easy_sock/lib/easy_sock.js:76:36
+      1  100.0%            LazyCompile: ~data /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/server/get-data.js:5:34
+      1    5.9%      LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/context.js:107:10
+      1  100.0%        LazyCompile: ~onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:165:21
+      1  100.0%          t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1  100.0%            LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+      1    5.9%      LazyCompile: *emit events.js:264:44
+      1    5.9%      Eval: ~<anonymous> /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/@babel/core/lib/parse.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1017:37
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:916:33
+      1    5.9%      Eval: ~<anonymous> /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/@babel/core/lib/gensync-utils/async.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1017:37
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:916:33
+     10    1.0%    LazyCompile: *writevGeneric internal/stream_base_commons.js:118:23
+     10  100.0%      LazyCompile: ~Socket._writeGeneric net.js:759:42
+     10  100.0%        LazyCompile: ~Socket._writev net.js:791:36
+     10  100.0%          LazyCompile: ~doWrite internal/streams/writable.js:367:17
+     10  100.0%            LazyCompile: ~clearBuffer internal/streams/writable.js:493:21
+
+    487    7.5%  T _vm_copy
+
+    382    5.9%  T __ZN4node7TCPWrap7ConnectERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+    382  100.0%    T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+    382  100.0%      LazyCompile: ~internalConnect net.js:865:25
+    154   40.3%        LazyCompile: *<anonymous> net.js:1007:73
+    154  100.0%          LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+    136   35.6%        LazyCompile: *defaultTriggerAsyncIdScope internal/async_hooks.js:421:36
+    136  100.0%          LazyCompile: ~<anonymous> net.js:1007:73
+    136  100.0%            LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+     92   24.1%        LazyCompile: ~defaultTriggerAsyncIdScope internal/async_hooks.js:421:36
+     92  100.0%          LazyCompile: ~<anonymous> net.js:1007:73
+     87   94.6%            LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+      5    5.4%            LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+
+    366    5.6%  T _host_get_clock_service
+
+    348    5.3%  T __ZN4node10StreamBase8JSMethodIXadL_ZNS0_6WritevERKN2v820FunctionCallbackInfoINS2_5ValueEEEEEEEvS7_
+    346   99.4%    T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+    346  100.0%      LazyCompile: ~writevGeneric internal/stream_base_commons.js:118:23
+    346  100.0%        LazyCompile: ~Socket._writeGeneric net.js:759:42
+    346  100.0%          LazyCompile: ~Socket._writev net.js:791:36
+    346  100.0%            LazyCompile: ~doWrite internal/streams/writable.js:367:17
+
+    134    2.1%  t __ZN4node2fsL4ReadERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+    134  100.0%    T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+    134  100.0%      LazyCompile: ~readSync fs.js:555:18
+    134  100.0%        LazyCompile: ~tryReadSync fs.js:362:21
+    134  100.0%          LazyCompile: ~readFileSync fs.js:374:22
+    132   98.5%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+
+    112    1.7%  /usr/lib/system/libsystem_malloc.dylib
+     37   33.0%    LazyCompile: *clearBuffer internal/streams/writable.js:493:21
+     37  100.0%      LazyCompile: *end _http_outgoing.js:769:45
+     37  100.0%        LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/context.js:107:10
+     25   67.6%          LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:165:21
+     25  100.0%            t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+     12   32.4%          LazyCompile: ~onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:165:21
+     12  100.0%            t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+     20   17.9%    T __ZN2v88internal24Builtin_ErrorConstructorEiPmPNS0_7IsolateE
+     20  100.0%      LazyCompile: ~structuredStack structured-stack:3:38
+     16   80.0%        LazyCompile: *isInsideNodeModules internal/util.js:353:29
+     16  100.0%          LazyCompile: ~showFlaggedDeprecation buffer.js:180:32
+     16  100.0%            LazyCompile: *data /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/server/get-data.js:5:34
+      4   20.0%        LazyCompile: ~isInsideNodeModules internal/util.js:353:29
+      4  100.0%          LazyCompile: ~showFlaggedDeprecation buffer.js:180:32
+      2   50.0%            LazyCompile: ~Buffer buffer.js:280:16
+      2   50.0%            LazyCompile: *data /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/server/get-data.js:5:34
+     15   13.4%    t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      4   26.7%      t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      2   50.0%        LazyCompile: ~readPackage internal/modules/cjs/loader.js:240:21
+      1   50.0%          LazyCompile: ~resolveExports internal/modules/cjs/loader.js:422:24
+      1  100.0%            LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:444:28
+      1   50.0%          LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:271:26
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+      1   25.0%        LazyCompile: ~module.exports /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/server/get-data.js:3:33
+      1  100.0%          LazyCompile: *<anonymous> /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa-mount/index.js:48:25
+      1  100.0%            LazyCompile: ~dispatch /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa-compose/index.js:35:23
+      1   25.0%        LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:199:10
+      1  100.0%          LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/context.js:107:10
+      1  100.0%            LazyCompile: *onerror /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/koa/lib/application.js:165:21
+      1    6.7%      LazyCompile: ~wrapCallSite /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/source-map-support/source-map-support.js:368:22
+      1  100.0%        LazyCompile: ~prepareStackTrace /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/source-map-support/source-map-support.js:433:27
+      1  100.0%          LazyCompile: ~maybeOverridePrepareStackTrace internal/errors.js:84:40
+      1  100.0%            LazyCompile: ~prepareStackTrace internal/errors.js:59:27
+      1    6.7%      LazyCompile: ~using /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/@babel/core/lib/config/caching.js:224:8
+      1  100.0%        LazyCompile: ~<anonymous> /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/@babel/core/lib/config/config-descriptors.js:83:71
+      1  100.0%          LazyCompile: ~cachedFunction /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/@babel/core/lib/config/caching.js:54:34
+      1  100.0%            t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1    6.7%      LazyCompile: ~explode /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/@babel/traverse/lib/visitors.js:20:17
+      1  100.0%        LazyCompile: ~merge /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/@babel/traverse/lib/visitors.js:143:15
+      1  100.0%          Eval: ~<anonymous> /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/@babel/traverse/lib/path/conversion.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1017:37
+      1    6.7%      LazyCompile: ~enabledHooksExist internal/async_hooks.js:440:27
+      1  100.0%        LazyCompile: ~popAsyncContext internal/async_hooks.js:515:25
+      1  100.0%          LazyCompile: ~emitAfterScript internal/async_hooks.js:479:25
+      1  100.0%            LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+      1    6.7%      LazyCompile: ~callback /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/ee-first/index.js:53:20
+      1  100.0%        LazyCompile: ~onevent /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/ee-first/index.js:81:26
+      1  100.0%          LazyCompile: *emit events.js:264:44
+      1  100.0%            LazyCompile: ~onFinish _http_outgoing.js:764:18
+      1    6.7%      LazyCompile: ~buildRootChain /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/@babel/core/lib/config/config-chain.js:68:25
+      1  100.0%        t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1  100.0%          LazyCompile: ~loadPrivatePartialConfig /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/@babel/core/lib/config/partial.js:75:35
+      1  100.0%            t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1    6.7%      LazyCompile: ~CallSiteToString /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/source-map-support/source-map-support.js:292:26
+      1  100.0%        LazyCompile: ~prepareStackTrace /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/source-map-support/source-map-support.js:433:27
+      1  100.0%          LazyCompile: ~maybeOverridePrepareStackTrace internal/errors.js:84:40
+      1  100.0%            LazyCompile: ~prepareStackTrace internal/errors.js:59:27
+      1    6.7%      LazyCompile: ~<anonymous> /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/@babel/core/lib/gensync-utils/async.js:24:43
+      1  100.0%        t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+      1  100.0%          LazyCompile: ~evaluateSync /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/gensync/index.js:249:22
+      1  100.0%            LazyCompile: ~sync /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/gensync/index.js:88:19
+      1    6.7%      LazyCompile: *onwrite internal/streams/writable.js:394:17
+      1  100.0%        LazyCompile: *writeOrBuffer internal/streams/writable.js:334:23
+      1  100.0%          LazyCompile: *value internal/console/constructor.js:258:20
+      1  100.0%            LazyCompile: *warn internal/console/constructor.js:362:7
+      1    6.7%      Eval: ~<anonymous> /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/@babel/types/lib/definitions/core.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1017:37
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:916:33
+      1    6.7%      Eval: ~<anonymous> /Users/qscbfe/qsccode/diy/myprojectawsome/diy/learnnode/36/node_modules/@babel/register/lib/cache.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1017:37
+      1  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+      1  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:916:33
+      5    4.5%    LazyCompile: *connectionListenerInternal _http_server.js:418:36
+      3   60.0%      LazyCompile: *connectionListener _http_server.js:412:28
+      3  100.0%        LazyCompile: *onconnection net.js:1531:22
+      1   20.0%      LazyCompile: ~defaultTriggerAsyncIdScope internal/async_hooks.js:421:36
+      1  100.0%        LazyCompile: ~connectionListener _http_server.js:412:28
+      1  100.0%          LazyCompile: *emit events.js:264:44
+      1  100.0%            LazyCompile: ~onconnection net.js:1531:22
+      1   20.0%      LazyCompile: *defaultTriggerAsyncIdScope internal/async_hooks.js:421:36
+      1  100.0%        LazyCompile: ~connectionListener _http_server.js:412:28
+      1  100.0%          LazyCompile: *emit events.js:264:44
+      1  100.0%            LazyCompile: ~onconnection net.js:1531:22
+      2    1.8%    T __ZN2v88internal17Builtin_JsonParseEiPmPNS0_7IsolateE
+      2  100.0%      LazyCompile: ~readPackage internal/modules/cjs/loader.js:240:21
+      2  100.0%        LazyCompile: ~resolveExports internal/modules/cjs/loader.js:422:24
+      2  100.0%          LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:444:28
+      2  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:796:35
+
+     87    1.3%  T __ZN4node10HandleWrap5CloseERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+     87  100.0%    T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+     77   88.5%      LazyCompile: *Socket._destroy net.js:653:37
+     74   96.1%        LazyCompile: *destroy internal/streams/destroy.js:5:17
+     39   52.7%          LazyCompile: *onceWrapper events.js:416:21
+     39  100.0%            LazyCompile: *emit events.js:264:44
+     29   39.2%          LazyCompile: ~onceWrapper events.js:416:21
+     29  100.0%            LazyCompile: *emit events.js:264:44
+      6    8.1%          LazyCompile: ~afterConnect net.js:1108:22
+      3    3.9%        LazyCompile: ~destroy internal/streams/destroy.js:5:17
+      2   66.7%          LazyCompile: ~onceWrapper events.js:416:21
+      2  100.0%            LazyCompile: *emit events.js:264:44
+      1   33.3%          LazyCompile: ~afterConnect net.js:1108:22
+     10   11.5%      LazyCompile: ~Socket._destroy net.js:653:37
+     10  100.0%        LazyCompile: ~destroy internal/streams/destroy.js:5:17
+      8   80.0%          LazyCompile: ~onceWrapper events.js:416:21
+      6   75.0%            LazyCompile: *emit events.js:264:44
+      2   25.0%            LazyCompile: ~emit events.js:264:44
+      2   20.0%          LazyCompile: ~afterConnect net.js:1108:22
+
+     73    1.1%  T __ZN4node10StreamBase8JSMethodIXadL_ZNS0_11WriteStringILNS_8encodingE1EEEiRKN2v820FunctionCallbackInfoINS4_5ValueEEEEEEEvS9_
+     72   98.6%    T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+     72  100.0%      LazyCompile: ~handleWriteReq internal/stream_base_commons.js:47:24
+     60   83.3%        LazyCompile: *writeOrBuffer internal/streams/writable.js:334:23
+     43   71.7%          LazyCompile: *value internal/console/constructor.js:258:20
+     40   93.0%            LazyCompile: *warn internal/console/constructor.js:362:7
+      3    7.0%            LazyCompile: ~warn internal/console/constructor.js:362:7
+     13   21.7%          LazyCompile: *Writable.write internal/streams/writable.js:258:36
+     13  100.0%            LazyCompile: ~value internal/console/constructor.js:258:20
+      4    6.7%          LazyCompile: ~Writable.write internal/streams/writable.js:258:36
+      4  100.0%            LazyCompile: ~value internal/console/constructor.js:258:20
+     12   16.7%        LazyCompile: ~writeGeneric internal/stream_base_commons.js:143:22
+     12  100.0%          LazyCompile: ~Socket._writeGeneric net.js:759:42
+     12  100.0%            LazyCompile: ~Socket._write net.js:796:35
+      1    1.4%    LazyCompile: *handleWriteReq internal/stream_base_commons.js:47:24
+      1  100.0%      LazyCompile: *writeOrBuffer internal/streams/writable.js:334:23
+      1  100.0%        LazyCompile: *value internal/console/constructor.js:258:20
+      1  100.0%          LazyCompile: *warn internal/console/constructor.js:362:7
+      1  100.0%            t __ZN2v88internal12_GLOBAL__N_132InsertCodeIntoOptimizedCodeCacheEPNS0_24OptimizedCompilationInfoE
+
+     71    1.1%  t __ZN4node2fsL22InternalModuleReadJSONERKN2v820FunctionCallbackInfoINS1_5ValueEEE
+     71  100.0%    T __ZN2v88internal21Builtin_HandleApiCallEiPmPNS0_7IsolateE
+     71  100.0%      LazyCompile: ~read internal/modules/package_json_reader.js:16:14
+     71  100.0%        LazyCompile: ~readPackage internal/modules/cjs/loader.js:240:21
+     69   97.2%          LazyCompile: ~resolveExports internal/modules/cjs/loader.js:422:24
+     69  100.0%            LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:444:28
+      2    2.8%          LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:271:26
+      1   50.0%            LazyCompile: ~trySelf internal/modules/cjs/loader.js:391:17
+      1   50.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1072:37
+

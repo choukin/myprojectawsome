@@ -101,5 +101,185 @@ Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境，它使用�
   ```
 
  ##  25 Node.js net 搭建多路复用的RPC通道
+ 全双工通信通道搭建
+ - 关键在于应用层协议需要标记包号的字段
+ - 处理以下情况，需要有标记包长的字段
+   - 粘包
+   - 不完整包
+  - 错误处理
 
 
+## 27 
+nodemon 自动检测代码修改重启
+```sh
+# sudo npm i -g nodemon
+nodemon index.js
+
+```
+
+## 28 模版渲染
+ - include 子模版
+ - xss过滤 模版helper函数
+
+ ## 29 模版引擎
+
+ ## 31 API 服务
+ ### RESTful
+ - 简单易懂
+ - 可以快速搭建
+ - 在数据聚合方面有很大的劣势
+
+ ### GraphQL
+ - 专注数据聚合，前端想要什么就返回什么
+
+ ## 32 GraphQL
+ - FaceBook 开发的实现API的库
+   - 让前端有自定义查询数据的能力
+
+
+   ## 34 列表页面解析
+   - 后端需要渲染列表
+     - 首屏加速
+     - SEO
+   - 前端也需要渲染列表
+     - 无刷新过滤、排序  
+
+  - 前后端同构
+   - 同一个模版/组件，可以浏览器渲染，也可以在Node.js 渲染  
+
+  ## 35 前后端同构
+
+  - ReactDomServer.renderToString()
+
+  - VueServerRender.renderToString()
+
+  - React/Vue 同构最大的难题是数据部分
+
+
+  - 同构的关键
+    - 注重职责的分离
+
+
+
+## 36 HTTP 服务性能测试
+### 压力测试工具
+ - ab
+   ```sh
+   ab -c200 -n1600 http://127.0.0:3000/download  
+   #200 个客户端 1600 次请求
+   # Transfer rate: 传输速率
+   # Requests per second:  吞吐率
+   ```
+   
+ - webbeanch
+
+ ### 找到性能瓶颈 cpu 内存 硬盘 后端
+ - top 
+ - iostat 
+
+
+## 38 Node.js 性能分析工具
+- 工具
+  - Node.js 自带profile
+  ```sh
+  node --prof entry.js
+  ab -c6 -t15 http://127.0.0:3000/download 
+
+  # 分析文件
+  node --prof-process **.log > profile.txt
+  ```
+
+  ticks CUP的tick数量
+  total 占用比
+
+
+  - Chrome devtool
+  ```sh
+  node --inspect-brk server/index.js
+  ## 打开 chrome 输入 chrome://inspect/#devices
+  ab -c6 -t15 http://127.0.0:3000/download 
+
+  ```
+
+- [CLinic.js](https://www.npmjs.com/package/clinic)
+
+## 39 JavaScript 代码性能优化
+- 计算性能优化的本质
+  - 减少不必要的计算
+  - 空间换时间 缓存
+  思考： 在用户能感知到的时间里，这个计算是否是必要的
+
+-  Node.js HTTP 服务性能优化准则
+ - 提前计算 把服务阶段的计算放到启动阶段
+
+
+ ## 内存管理
+  - 垃圾回收
+   - 内存优化管理
+    - 新生代
+      - 容量小，垃圾回收更快
+    - 老生代
+     - 容量大，垃圾回收更慢
+
+   - 减少内存使用，也是提高服务性能的手段
+     - Node.js Buffer 的内存分配策略 缓存池
+      - 小于8kb 
+      - 大于8kb
+       
+   - 如果有内存泄漏，会导致服务性能大大降低  
+
+
+   ## 41 Node.js C++ 模块优化 代码
+    - bindings 自动判断 c++ 模块路径
+    - node-gyp 编译c++ 模块
+    ```sh
+    # 编译
+    node-gyp rebuild
+    ```
+    - 推荐使用 N-API
+
+    - C++ 插件
+      - 将计算量转移到C++ 进行
+        - 收益 C++ 元算比 JavaScript 更快的部分
+        - 成本 C++ 变量和 V8 变量的转换
+
+
+## 42 多进程优化，子进程与线程
+
+### 子进程与线程
+- 进程
+  - 操作系统挂载运行程序的单元
+  - 拥有一些独立的资源，入内存等
+
+- 线程（比进程更小的单元）
+ - 进行远算调度的单元
+ - 进程内的线程共享进程内的资源
+
+- 一个进程可以有多个线程
+
+- 进程类似 公司
+- 线程类似 职员
+
+- Node.js 的事件循环
+ - 主线程运行 v8 与 javascript
+ - 多个子线程通过事件循环被调度
+
+- 使用子进程或线程利用更多CPU资源
+
+
+## 42 多进程优化：Node.js cluster 模块实战与源码解读
+> 利用cluster 可以快速创建多核能力的网络服务
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
