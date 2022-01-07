@@ -4,11 +4,13 @@
   "description": "typescript script https://jkchao.github.io/typescript-book-chinese/",
   "main": "index.js",
   "dependencies": {
-    "cross-env": "^7.0.3",
     "axios": "^0.24.0",
+    "cross-env": "^7.0.3",
     "echarts": "^5.2.2",
     "electron": "^13.1.9",
     "iconutil": "^1.0.2",
+    "koa": "^2.13.4",
+    "koa-mount": "^4.0.0",
     "protocol-buffers": "^4.2.0",
     "resize-detector": "^0.3.0",
     "vue-router": "^3.5.2"
