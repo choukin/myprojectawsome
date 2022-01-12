@@ -7,13 +7,13 @@ function sayHello(person:string){
 }
 
 // let user = 'CAT'
-let user = 0
+let user1 = 0
 
 let createByNewBoolean :Boolean = new Boolean(1)
 
 let boolean:boolean = Boolean(1)
 
-console.log(sayHello(user));
+console.log(sayHello(user1));
 
 let v:void;
 let num:number =v;
@@ -150,3 +150,164 @@ let b:Array<string> = ['2']
         return Number(x).toString().split('').reverse().join('');
     }
  }
+
+
+
+ // 断言
+ // 断言为一个联合类型为其中一个类型
+interface Cat{
+    name:string;
+    run():void;
+}
+
+interface Fish{
+    name:string;
+    swim():void;
+}
+
+function getName(animal:Cat|Fish){
+    return animal.name;
+}
+
+function isFish(animal:Cat|Fish){
+    // 不断言只能使用公共属性
+    if(typeof (animal as Fish).swim === 'function'){
+        return true;
+    }
+    return false;
+}
+
+// // 将一个父类断言为更具体的子类
+// interface ApiError extends Error{
+//     code:number
+// }
+
+// interface HttpError extends Error{
+//     statusCode:number
+// }
+
+// function isApiError(error:Error){
+//     // 如果是接口只能使用这种方式
+//     if(typeof(error as ApiError).code === 'number'){
+//         return true;
+//     }
+//     return false;
+// }
+
+
+// 将一个父类断言为更具体的子类
+class ApiError extends Error{
+    code:number = 0
+}
+
+class HttpError extends Error{
+    statusCode:number = 200;
+}
+// 更合适的判断
+function isApiErrorin(error:Error) {
+    if(error instanceof ApiError) {
+        return true;
+    }
+    return false;
+}
+
+// 将任何一个类型断言为any
+(window as any).foo = 1
+
+// 将any断言为具体的类型
+
+function getCacheData(key: string):any{
+    return (window as any).cache[key]
+}
+
+interface Cat{
+    name:string;
+    run():void;
+}
+
+const tom1 = getCacheData('tom') as Cat;
+tom1.run();
+
+// 双重断言
+
+interface Cat{
+    run():void;
+}
+interface Fish{
+    swim():void;
+}
+
+function testCat(cat: Cat){
+    return (cat as any as Fish);
+}
+
+// 类型断言 VS 类型转换
+
+function toBoolean(something:any):boolean{
+    return something as boolean;
+}
+
+toBoolean(1)
+// 类型断言不是类型转换，它不会真的影响到变量的类型
+
+function toBoolean1(something:any):boolean{
+    return Boolean(something)
+}
+
+toBoolean1(1)
+
+// 类型断言 VS 类型声明
+
+function getCacheData1(key: string):any{
+    return (window as any).cache[key]
+}
+
+interface Cat{
+    name:string;
+    run():void;
+}
+
+
+const tom2:Cat = getCacheData1('tom');
+
+tom2.run();
+
+// 类型断言 vs 范型
+function getCacheData3<T>(key:string):T{
+    return (window as any).cache[key];
+}
+
+const tom3 = getCacheData3<Cat>('tom')
+tom3.run();
+
+jQuery('#foo')
+// 使用declare  let 定义的 jQuery 类型，允许修改这个全局变量
+// jQuery = function(selector){
+//     return document.querySelector(selector);
+// }
+
+jQuery(function(){
+    alert('dom')
+})
+
+let catd = new Animal('Tom')
+
+let directions = [Directions.Up,Directions.Down,Directions.Left,Directions.Right];
+
+// 声明文件中 declare namespace 比较常用，用来表示全局变量是一个对象，包含很多子属性；
+// 嵌套命名空间
+
+jQuery.fn.extend({
+    check:function(){
+        return this.each(function(){
+            this.checked = true;
+        })
+    }
+})
+
+let settings:jQuery.AjaxSettings ={
+    method:'POST',
+    data:{
+        name:'foo'
+    }
+}
