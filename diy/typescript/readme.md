@@ -463,4 +463,360 @@ npm install -g typescript
     - HTMLElement 
     - Event 
     - NodeList  
+    - [TypeScript 核心库定义文件](https://github.com/Microsoft/TypeScript/tree/main/src/lib)
      
+   - 用 TypesScript 写 Node.js 
+     Node.js 不是内置对象的一部分，如果想要用TypeScript 写 Nodejs 需要引入第三方声明文件
+     ```sh
+      npm install @types/node --save-dev
+     ```
+## 进阶
+ - 类型别名
+ - 字符串字面量类型
+ - 元组
+ - 枚举
+ - 类
+ - 类与接口
+ - 范型
+ - 声明合并
+ - 扩展阅读
+
+ ### 类型别名 type
+  类型别名给一个类类起个新的名字,类型别名常用于联合类型；
+
+### 字符串字面量类型 type
+  字符串字面量类型用来约束取值只能是某几个字符串中的一个。
+
+### 元组
+  数组合并了相同类型的对象，而元组（Tuple）合并了不同类型的对象
+  - 当直接对元组类型的变量进行初始化或者赋值的时候，需要提供所有元组类型中指定的项
+  - 当添加越界的元素时，它的类型会被限制为元组中每个类型的联合类型；
+
+### 枚举
+枚举（Enum）类型用于取值被限定在一定范围的场景；
+```ts
+  enum Days {Sun, Man, Tue, Wed, Thu, Fri, Sat}
+```
+```js
+// 编译结果
+var Days;
+(function (Days) {
+    Days[Days["Sun"] = 0] = "Sun";
+    Days[Days["Mon"] = 1] = "Mon";
+    Days[Days["Tue"] = 2] = "Tue";
+    Days[Days["Wed"] = 3] = "Wed";
+    Days[Days["Thu"] = 4] = "Thu";
+    Days[Days["Fri"] = 5] = "Fri";
+    Days[Days["Sat"] = 6] = "Sat";
+})(Days || (Days = {}));
+```
+- 枚举成员会被赋值为从0 开始递增的数字，同时也对枚举值到枚举名进行方向映射
+- 手动赋值， 未手动赋值的枚举项会接着上一个枚举项递增；
+- 未手动赋值的枚举项与手动赋值的重复了，TS不会察觉；
+- 手动赋值的枚举项也可以为小数，或负数，此时后续未手动赋值的项，递增步长仍为1；
+
+#### 常数项和计算所得项
+枚举有两种类型： 常数项（constant member）和计算所得项（computed member）
+```ts
+enum Color {Red, Green, Blue = "blue".length};
+```
+- 如果紧接在计算所得项后面的是未手动赋值的项，那么它就会因为无法获得初始值而报错；
+- 当满足下面条件时，枚举成员被当作是常数
+  - 不具有初始化函数，并且之前的枚举成员是常数。在这种情况下，当前枚举成员值为上一个枚举成员的值加1，但第一个枚举元素是例外，如果它没有初始化方法，那么它的初始值为0；
+  - 枚举成员使用常数枚举表达式初始化。常数枚举表达式是TypeScript 表达式的子集，它可以在编译阶段求值。当一个表达式满足下面条件之一时，它就是一个常数表达式：
+    - 数字字面量
+    - 引用之前定义的常数枚举成员（可以是在不同的枚举类型中定义的）如果这个成员是在同一个枚举类型中定义的，可以使用非限定名来引用；
+    - 带括号的常数枚举表达式
+    - + - * / << >> >>> & | ^ 二元元算符 常数枚举表达式做为其一个操作对象。若常数枚举表达式求值后 为 NaN 或 Infinity 则会在编译阶段报错；
+
+    所有其他情况的枚举成员被当作是需要计算得出的值；
+
+#### 常数枚举
+- 常数枚举是使用 const enum 定义的枚举类型；
+  常数枚举与普通枚举的区别是，它会在编译阶段被删除，并切不能包含计算成员；
+
+#### 外部枚举
+外部枚举（Ambient Enums） 是使用 `declare enum` 定义的枚举类型；  
+
+```ts
+// declare const enum Directions {
+declare enum Directions {
+  Up,
+  Down,
+  Left,
+  Right
+}
+let directions = [Directions.Up, Directions.Down, Directions.Left, Directions.Right]
+```
+
+外部枚举与声明语句一样，常出现在声明文件中；
+
+### 类
+传统方法中，JavaScript 通过构造函数实现类的概念，通过原型链实现继承。 ES6 使用class
+#### 类的概念
+- 类 定义了一件事物的抽象特点，包含它的属性和方法
+- 对象 类的实例 通过 new 生成
+- 面向对象 的三大特性 封装 继承 多态
+- 封装：Encapsulation 将对数据的操作细节隐藏起来，只暴露对外的接口。外界调用端不需要知道细节，就能通过对外提供的接口来访问该对象，同时也保证了外界无法任意更改对象内部数据；
+- 继承 Inheritance : 子类继承父类，子类除了拥有父类的所有特性外，还有一些更具体的特性；
+- 多态 Polymorphism 由继承而产生了相关不同的类，对同一个方法可以有不同的响应，比如 Cat 和Dog 都继承自 Animal 但是分别实现了自己的eat方法，此时针对某一个实例，我们无需了解它是Cat还是Dog，就可以直接调用eat 方法，程序会自动判断出来如何执行eat
+- 存取器（getter & setter）用以改变属性的读取和赋值行为；
+- 修饰符 Modifiers: 修饰符是一些关键字，用于限定成员或类型的性质，比如 public 表示公有属性或方法；
+- 抽象类 Abstract Class 抽象类是供其他类继承的基类，抽象类不允许被实例化。抽象类中的抽象方法必须在子类中实现
+- 接口 Interfaces: 不同类之间公有属性或方法，可以抽象成一个接口。接口可以被类实现（implements）一个类只能继承自另一个类，但是可以实现多个接口；
+
+#### ES6 中类的用法
+
+- 属性和方法
+  - 使用class 定义类，使用Constructor 定义构造函数
+  - 通过new 生成新实例的时候会自动调用构造函数；
+- 类的继承
+- 存取器
+- 静态方法
+
+#### ES7 中类的用法
+- 实例属性
+ ES6中实例的属性只能通过构造函数中 this.xxx 来定义，ES7题案中可以直接在类里定义
+ ```ts
+  class Animal{
+    name = 'Jack';
+    constructor() {
+      // ... 
+    }
+  }
+  let a = new Animal();
+  console.log(a.name);
+ ```
+
+ - 静态属性 使用 static 定义一个静态属性；
+ ```ts
+ class Animal {
+   static num = 42;
+   constructor(){
+     /// ... 
+   }
+ }
+
+ console.log(Animal.num)
+ ```
+
+ #### Typescript 中类的用法
+ - public private 和 protected
+  TypeScript 可以使用三种访问修饰符（Access Modifiers）,分别是 public private 和 protected；
+    - public 修饰的属性或方法是公有的，可以在任何地方被使用，默认所有的属性和方法都是public的；
+    - private 修饰的属性或方法是自由的，不能在声明它的类的外部被访问；
+    - protected 修饰的属性或方法是受保护的，它和private类似，区别是它在子类中也是允许被访问的；
+
+    - 当构造函数修饰为 private 时， 该类是不允许被继承或者是实例化；
+    - 当构造函数修饰为 protected 时，该类只允许被继承；
+
+- 参数属性
+ 修饰符和 readonly 还可以使用在构造函数中，等同于类中定义该属性同时给该属性赋值，使代码更简洁；
+
+- readonly
+ 只读属性关键字，只允许，出现在属性声明或索引前面或构造函数中；
+ 注意如果 readonly和其他访问修饰符同时存在的话，需要写在其后面；
+ ```ts
+  class Animal{
+    public constructor(public readonly name) {
+
+    }
+  }
+ ```
+
+ #### 抽象类
+ abstract 用于定义抽象类和其中的抽象方法；
+ - 抽象类是不允许被实例化的；
+ - 抽象类中的抽象方法必须被子类实现；
+
+ #### 类的类型
+ ```ts
+ class Animal{
+   name: string;
+   constructor(name: string){
+     this.name = name
+   }
+   sayHi():string{
+     return `My name is ${this.name}`
+   }
+ }
+
+ let a: Animal = new Animal('Jack');
+ console.log(a.sayHi());
+ ```
+
+ ### 类与接口
+ 接口 interfaces 的用途
+ - 对 对象的形状进行描述
+ - 对类的一部分行为进行抽象；
+
+ #### 类实现接口
+
+ 实现 implements 是面向对象中的一个重要概念。一般来讲，一个类只能继承自另一个类，有时候不同类之间有一些共有的特性，这时候就可以把特性提取成接口，用implements 关键字来实现；这个特性提高了面向对象的灵活性；
+ - 一个类可以实现多个接口
+ - 接口可以继承接口
+
+- 接口可以继承类 TS中独有的特性；本质是接口继承接口（把类当作一个对对象形状的描述）；只会继承实例属性和方法；不包括构造函数，静态属性，静态方法；
+
+### 泛型
+ 泛型 Generics 是指在定义函数、接口或类的时候，不预先指定具体的类型，而在使用的时候再制定类型的一种特性；
+
+#### 泛型约束
+ 在函数内部使用泛型变量的时候，由于事先不知道它是那种类型，所以不能随意的操作它的属性或方法；
+ ```ts
+ // 只允许这个函数传入那些包含length属性的变量，
+ inteface Lengthwise{
+   length:number;
+ }
+ function loggingIndentity<T extends Lengthwise>(arg:T){
+   console.log(arg.length);
+   return arg;
+ }
+ //  多个类型参数之间也可以互相约束
+ // T 继承U 保证U 上不会出现T中没有的字段；
+ function copyFields<T extends U, U>(target:T, source:U):T{
+   for(let id in source) {
+     target[i] = (<T>source)[id]
+   }
+   return target;
+ }
+ ```
+
+#### 泛型接口
+可以使用(有泛型)接口来定义一个函数需要符合的形状
+ ```ts
+ interface CreateArrayFunc{
+   <T>(length:numberm,value:T):Array<T>;
+ }
+ let crateArray:CreateArrayFunc;
+ createArray = function<T>(length:number, value: T):Array<T>{
+   let result:T[] = [];
+   for(let i=0;i<length;i++>){
+     result[i] = value;
+   }
+   return result;
+ }
+ ```
+ 进一步，可以把泛型参数提前到接口名上
+  ```ts
+ interface CreateArrayFunc<T>{
+   <T>(length:numberm,value:T):Array<T>;
+ }
+ let crateArray:CreateArrayFunc<any>;
+ createArray = function<T>(length:number, value: T):Array<T>{
+   let result:T[] = [];
+   for(let i=0;i<length;i++>){
+     result[i] = value;
+   }
+   return result;
+ }
+ ```
+
+ #### 泛型类
+ 与泛型接口类似，泛型也可以用于类的类型定义中；
+ ```ts
+ class GenericNumber<T>{
+   zeroValue:T;
+   add:(x:T,y:t)=>T;
+}
+let m = new GenericNumber<number>();
+m.zeroValue = 0;
+m.add = function(x,y){return x+y;}
+ ```
+
+#### 泛型参数的默认类型
+TypeScript 以后，我们可以为泛型中的类型参数制定默认类型。 当使用泛型时没有在代码中之间制定类型参数，从实际值参数重也无法推测时，默认类型就会起作用；
+
+```ts
+function creatArray<T = string>(length: number,value:T):Array<T>{
+  let result:T = [];
+  for(let i = 0;i<length;i++>{
+    result[i] = value;
+  })
+  return result;
+}
+
+```
+
+### 声明合并
+ 如果定义了两个相同名字的函数、接口或类，那么他们会合并成一个类型；
+
+ #### 函数的合并
+ 可以使用重载定义多个函数类型
+ ```ts
+function reverse(s:number):number;
+function reverse(s:string):string;
+function reverse(s:number|string):number|string{
+  if(typeof x === 'number'){
+    return Number(x.toString().split('').reverse().join(''))
+  } else if(typeof x === 'string') {
+    return x.split('').reverse().join('');
+  }
+}
+ ```
+
+ #### 接口合并 （类合并与接口合并规则一致）
+ 接口中的属性在合并时会简单的合并到一个接口
+ - 合并的属性类型必须时唯一的；
+
+ ```ts
+ interface Alarm{
+   price:number;
+ }
+ interface Alarm{
+   weight: number;
+ }
+
+ // 相当于
+
+ interface Alarm{
+   price:number;
+   weight:number;
+ }
+
+
+ ```
+ 接口中方法的合并与函数的合并一样
+ ```ts
+
+interface Alarm{
+  price:number;
+  alert(s:string):string;
+}
+interface Alarm{
+  weight:number;
+  alert(s:string,n:number):string;
+}
+// 相当于
+interface Alarm{
+  price: number;
+  weight:number;
+  alert(s:string):string;
+  alert(s:string,n:number):string;
+}
+ ```
+
+
+## 工程
+- 代码检查
+- 编译选项
+### 代码检查
+安装 ESLint
+```ts
+npm install --save-dev eslint
+```
+
+由于Eslint 默认使用 Espree
+进行语法解析，无法识别TypeScript的一些语法，故我们需要安装`@typescript-eslint/parser` 替代掉默认的解析器，别忘了安装 typescript
+
+```sh
+npm install --save-dev typescript @typescript-eslint/parser
+```
+
+接下来需要安装对应的插件  `@typescript-eslint/eslint-plugin` 它作为eslint默认规则的补充，提供了一些额外适用于ts的语法规则；
+
+```sh
+npm install --save-dev @typescript-eslint/eslint-plugin
+```
+
+### 创建配置文件
