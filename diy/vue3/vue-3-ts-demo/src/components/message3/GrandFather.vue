@@ -8,6 +8,7 @@
 <script setup lang="ts">
 import Father from "./Father.vue";
 import { provide, ref } from "vue";
+
 const msg = ref<string>("helloworld");
 provide("msg", msg);
 setTimeout(() => {

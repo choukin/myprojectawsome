@@ -4,6 +4,7 @@
   "description": "typescript script https://jkchao.github.io/typescript-book-chinese/",
   "main": "index.js",
   "dependencies": {
+    "@vue/reactivity": "^3.2.31",
     "axios": "^0.24.0",
     "cross-env": "^7.0.3",
     "echarts": "^5.2.2",
@@ -12,6 +13,7 @@
     "koa": "^2.13.4",
     "koa-mount": "^4.0.0",
     "protocol-buffers": "^4.2.0",
+    "regenerator": "^0.13.1",
     "resize-detector": "^0.3.0",
     "vue-router": "^3.5.2"
   },

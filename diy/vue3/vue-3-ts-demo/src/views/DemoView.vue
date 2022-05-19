@@ -1,5 +1,10 @@
 <template>
   <!-- 挂载dom元素 -->
+  <div>
+    {{ counter.count }}{{ count }}
+    <button @click="plusone">count++</button>
+    <button @click="reset">reset</button>
+  </div>
   <div class="msg" :class="$style.msg" v-html="content"></div>
   <div class="msg" ref="msgref" :style="[style1, style2]">
     {{ msg }}{{ phoneNumber }}{{ id }}{{ name }}
@@ -62,6 +67,9 @@ import type { ComputedRef } from "vue";
 import Tab from "@cp/Tab.vue";
 import Child from "@cp/Child.vue";
 import GrandFather from "@cp/message3/GrandFather.vue";
+import { useCounterStore } from "../store/pinia/counter";
+import { storeToRefs } from "pinia";
+
 interface Member {
   id: number;
   name: string;
@@ -284,18 +292,36 @@ export default defineComponent({
     // 操作路由
     const router = useRouter();
     router.beforeEach((to, from) => {
-      alert(123);
+      // alert(123);
       console.log("to", to);
     });
 
     // router.push({ name: "home" });
     // router.back();
 
-    const app = getCurrentInstance();
-    if (app) {
-      const md5str: string =
-        app.appContext.config.globalProperties.$md5("hello world");
-    }
+    // const app = getCurrentInstance();
+    // if (app) {
+    //   const md5str: string =
+    //     app.appContext.config.globalProperties.$md5("hello world");
+    // }
+
+    const counter = useCounterStore();
+    console.log("secret", counter.secret);
+    const { count } = storeToRefs(counter);
+    counter.$subscribe((mutation, state) => {
+      console.log(mutation.storeId, JSON.stringify(state));
+    });
+    // counter.count++;
+    // counter.$patch({ count: counter.count + 1 });
+    // counter.incement();
+
+    const plusone = () => {
+      counter.incement();
+    };
+    const reset = () => {
+      // counter.$reset();
+      counter.$state = { count: 66 };
+    };
 
     return {
       msg,
@@ -316,6 +342,10 @@ export default defineComponent({
       style2,
       fontColor,
       content,
+      counter,
+      plusone,
+      count,
+      reset,
     };
   },
 });
@@ -333,11 +363,15 @@ export default defineComponent({
 </style>
 <style lang="stylus" scoped>
 // 定义颜色
-$color-black = #333
-$color-red = #ff000
-.msg
-  font-size 14px
-  color v-bind(fontColor)
-  :deep(.b)
-    background-color $color-red
+$color-black = #333;
+$color-red = #ff00 0;
+
+.msg {
+  font-size: 14px;
+  color: v-bind(fontColor);
+
+  :deep(.b) {
+    background-color: $color-red;
+  }
+}
 </style>

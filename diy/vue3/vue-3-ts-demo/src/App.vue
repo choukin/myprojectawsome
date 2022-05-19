@@ -7,7 +7,7 @@
     <router-link to="demo3">demo3</router-link>|
     <router-link to="/demo/about1">demo/about</router-link>
     <router-link to="/demo/about1?id=a">demo/about</router-link>
-    <router-link
+    <!-- <router-link
       to="/demo"
       custom
       v-slot="{ navigate, href, route, isActive, isExactActive }"
@@ -17,7 +17,7 @@
           isActive
         }}<br />{{ isExactActive }}</span
       >
-    </router-link>
+    </router-link> -->
   </nav>
   <router-view />
 </template>

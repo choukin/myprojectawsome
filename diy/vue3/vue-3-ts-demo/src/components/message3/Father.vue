@@ -36,7 +36,6 @@ onMounted(() => {
   setTimeout(() => {
     childinit.value.isShowDialog = false;
     childinit.value.show();
-    debugger;
   }, 4000);
 });
 </script>
