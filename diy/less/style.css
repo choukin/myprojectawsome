@@ -1,0 +1,13 @@
+.hom {
+  background-color: red;
+}
+.hom .conter {
+  /*我是注释*/
+  padding: 50px;
+}
+.hom .conter:hover {
+  background-color: red;
+  background: url("../img/white-sand.png");
+  border-top: dotted 1px black;
+  border-bottom: solid 2px red;
+}

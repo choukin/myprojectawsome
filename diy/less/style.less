@@ -1,0 +1,22 @@
+@bgcolor:red;
+@selector:.hom;
+@pd:padding;
+@images: "../img";
+
+.bordered() {
+    border-top: dotted 1px black;
+    border-bottom: solid 2px red;
+  }
+@{selector}{
+    background-color: @bgcolor;
+    .conter{
+        // 我是注释
+        /*我是注释*/
+     @{pd}:50px;
+     &:hover{
+         background-color: @bgcolor;
+         background: url("@{images}/white-sand.png");
+         .bordered
+     }
+    }
+}
