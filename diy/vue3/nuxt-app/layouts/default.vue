@@ -81,6 +81,45 @@ const routers = [
         path:'/dynamic',
         title:'dynamic'   
     }       
+    ,
+    {
+        name:'demo10NuxtLink',
+        path:'/demo10NuxtLink',
+        title:'demo10NuxtLink'   
+    }  
+    ,
+    {
+        name:'parent',
+        path:'/demo11pages/parent',
+        title:'parent'   
+    }  
+        ,
+    {
+        name:'parent/b',
+        path:'/demo11pages/parent/b',
+        title:'parent/b'   
+    }  
+     ,
+    {
+        name:'parent/reload-',
+        path:`/demo11pages/parent/reload-${(Math.random() * 100).toFixed()}`,
+        title:'parent/reload-'   
+    }  
+     ,
+    {
+        name:'/parent/static-',
+        path:`/demo11pages/parent/static-${(Math.random() * 100).toFixed()}`,
+        title:'/parent/static-'   
+    } ,{
+        name:'demo12server',
+        path:'/demo12server',
+        title:'demo12server',
+    }     
+    ,{
+        name:'demo13Locale',
+        path:'/demo13Locale',
+        title:'demo13Locale',
+    }  
 
 
 ]
