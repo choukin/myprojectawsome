@@ -43,7 +43,7 @@ io.on('connection',item=>{
 })
 
 // 启动服务
-const  port = process.env.PORT || 3000
+const  port = process.env.PORT || 4000
  server.listen(port, ()=>{
     console.log('服务器启动地址:', + port );
 })
