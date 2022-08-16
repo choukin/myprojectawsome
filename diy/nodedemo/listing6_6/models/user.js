@@ -50,21 +50,31 @@ class User{
 
     static getByName(name, cb){
         User.getId(name, (err, id)=>{
+            console.log('========');
             if(err) return cb(err)
             User.get(id, cb)
         })
     }
 
-    static getId(name, cb){
-        if(err) return cb(err)
-        db.get(`user:id${name}`, cb)
+    static async getId(name, cb){
+       const id = await db.get(`user:id:${name}`)
+       cb(null, id)
     }
 
-    static get(id, cb){
-        db.hgetll(`user:${id}`, (err,user)=>{
-            console.log('user ',user);
+    static async  get(id, cb){
+        const user = await db.hGetAll(`user:${id}`)
+        cb(null, new User(user))
+    }
+
+    static authenticate(name, passs,cb){
+        User.getByName(name,(err,user)=>{
             if(err) return cb(err)
-            cb(null, new User(user))
+            if(!user.id) return cb()
+            bcrypt.hash(pass, user.salt,(err,hash)=>{
+                if(err) return err
+                if(hash ===user.pass) return cb(null, user)
+                cb('pass error');
+            })
         })
     }
 }
