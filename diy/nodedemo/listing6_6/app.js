@@ -5,11 +5,15 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const session = require('express-session');
 const message = require('./middleware/messages')
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
+const register = require('./routes/register') 
+const login = require('./routes/login')
 const entries = require('./routes/entries')
 const validate = require('./middleware/validate')
+const user = require('./middleware/user')
+const api = require('./routes/api')
+const auth = require('./middleware/auth')
 
 var app = express();
 
@@ -31,6 +35,10 @@ app.use(session({
   // 初始化session时是否保存到存储。默认为true， 但是(后续版本)有可能默认失效，所以最好手动添加。
   saveUninitialized: true
 }))
+
+app.use('/api',auth,api)
+
+app.use(user)
 app.use(message)
 // 提供/public下的静态文件
 app.use(express.static(path.join(__dirname, 'public')));
@@ -41,8 +49,20 @@ app.post('/post',
   validate.required('entry[title]'),
   validate.lengthAbove('entry[title]'),
   entries.submit)
-app.use('/', entries.list);
+
 app.use('/users', usersRouter);
+
+app.get('/register', register.form)
+app.post('/register', register.submit)
+
+app.get('/login', login.form)
+app.post('/login', login.submit)
+app.get('/logout', login.logout)
+
+app.use('/', entries.list);
+
+
+
 
 
 

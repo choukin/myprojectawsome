@@ -16,6 +16,9 @@ exports.submit = (req,res, next)=>{
 
     entry.save((err)=>{
         if(err) return next(err)
+        if(req.remoteUser) {
+            res.json({message:'添加成功！'})
+        }
         res.redirect('/')
     })
 }

@@ -9,21 +9,18 @@ const db = redis.createClient({
 
 class Entry{
     constructor(obj){
-        for (const key in ojb) {
+        for (const key in obj) {
             this[key] = obj[key]
         }
     }
 
-    save(cb){
+    async save(cb){
         const entryJSON = JSON.stringify(this)
-        db.lpush(
+       await  db.lPush(
             'entries',
-            entryJSON,
-            (err)=>{
-                if(err) return cb(err)
-                cb()
-            }
+            entryJSON
         )
+        cb()
     }
 
     static async getRange(from ,to ,cb){

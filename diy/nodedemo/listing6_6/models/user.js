@@ -66,7 +66,7 @@ class User{
         cb(null, new User(user))
     }
 
-    static authenticate(name, passs,cb){
+    static authenticate(name, pass,cb){
         User.getByName(name,(err,user)=>{
             if(err) return cb(err)
             if(!user.id) return cb()
@@ -76,6 +76,13 @@ class User{
                 cb('pass error');
             })
         })
+    }
+
+    toJSON(){
+        return {
+            id:this.id,
+            name:this.name
+        }
     }
 }
 module.exports = User;
